@@ -1,7 +1,11 @@
+import Logo from "@components/Logo/Logo";
+
 export default function Home() {
   return (
     <header className="App-header">
-      <p>Hello World !</p>
+      <p>
+        <Logo />
+      </p>
     </header>
   );
 }
