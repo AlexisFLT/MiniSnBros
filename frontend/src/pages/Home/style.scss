@@ -118,6 +118,9 @@
 
 .clickHere {
   position: absolute;
+  text-decoration: none;
+  border: none;
+  color: black;
   bottom: 40%;
   font-size: App.$fontSize;
   font-family: App.$fontFamily;
