@@ -26,11 +26,13 @@
 .aboutTitle {
   font-size: calc(App.$fontSize * 2);
   margin-bottom: 3%;
+  color: App.$colorSecondary;
 }
 
 .paragraph1,
 .paragraph2 {
   font-size: calc(App.$fontSize * 1.2);
+  color: App.$colorThird;
 }
 
 .paragraph1 {

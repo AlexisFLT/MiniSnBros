@@ -8,6 +8,11 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
+      {/* <Route path="/asoiafminiatures" element={<Asoiaf />} /> */}
+      {/* <Route path="/swlegion" element={<Swlegion />} /> */}
+      {/* <Route path="/marvelcp" element={<MarvelCP />} /> */}
+      {/* <Route path="/divers" element={<Divers />} /> */}
+      {/* <Route path="/battlereport" element={<Battlereport />} /> */}
     </Routes>
   );
 }
