@@ -1,0 +1,103 @@
+@use "../../App.scss";
+
+.navBar {
+  //nav
+  background: rgb(232, 232, 232);
+  background: linear-gradient(
+    90deg,
+    rgba(232, 232, 232, 0.9556197478991597) 10%,
+    rgba(199, 199, 199, 1) 100%
+  );
+  width: max-content;
+  position: absolute;
+  right: 0;
+  -webkit-animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.5s
+    both;
+  animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.5s both;
+}
+
+.navBar .menuMain {
+  //nav ul
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navBar li {
+  //nav li
+  display: inline-block;
+}
+
+.navBar p {
+  //nav a
+  display: block;
+  padding: 0.75em 1.75em;
+  text-decoration: none;
+  color: App.$colorThird;
+  font-family: App.$fontFamily;
+  font-size: App.$fontSize;
+}
+
+.navBar p:hover {
+  //nav a:hover
+  color: App.$colorSecondary;
+}
+
+.menuContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.navBar li:hover {
+  //nav li:hover
+  background-color: App.$colorBG;
+}
+
+.subMenu {
+  position: absolute;
+  background-color: App.$colorBG;
+  width: auto;
+  display: none;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-radius: 0 0 0.5em 0.5em;
+}
+
+.navBar li:hover .subMenu {
+  display: block;
+}
+
+.subMenu li {
+  display: block;
+}
+
+.subText {
+  text-decoration: none;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
