@@ -7,6 +7,8 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .aboutTextBlock {
@@ -14,9 +16,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: auto;
   height: 100%;
-  width: 40%;
+  width: clamp(250px, 50%, 1080px);
+  margin: 0 auto;
   font-family: App.$fontFamily;
   gap: 2rem;
   line-height: 2.3rem;
@@ -24,14 +26,14 @@
 }
 
 .aboutTitle {
-  font-size: calc(App.$fontSize * 2);
+  font-size: clamp(1.75rem, 4vw, 3rem);
   margin-bottom: 3%;
   color: App.$colorSecondary;
 }
 
 .paragraph1,
 .paragraph2 {
-  font-size: calc(App.$fontSize * 1.2);
+  font-size: clamp(1.2rem, 2vw, 2rem);
   color: App.$colorThird;
 }
 

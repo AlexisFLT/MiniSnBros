@@ -1,113 +1,57 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import underline from "../../assets/underline.png";
 import "./style.scss";
 
 export default function Navbar() {
-  const [isActive, setIsActive] = useState("about");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  //   const [isShown, setIsShown] = useState(false);
-
-  const handleMouseOver = () => {
-    setIsDropdownOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsDropdownOpen(false);
-  };
-
-  //   const handleUnderlineOver = () => {
-  //     setIsShown(true);
-  //   };
-
-  //   const handleUnderlineLeave = () => {
-  //     setIsShown(false);
-  //   };
-
   return (
     <nav className="navBar">
-      <ul className="navBarList">
-        <Link to="/" className="navHome">
-          <li className="navHomeText">
-            <p>Home</p>
-            {/* {isActive === "home" ? <img id="underline" className="" src={underline}/> : ""} */}
-          </li>
-        </Link>
-        <Link to="/about" className="navAbout">
-          <li className="navAboutText">
-            <p>About</p>
-            {isActive === "about" ? (
-              <img
-                id="underline"
-                className=""
-                src={underline}
-                alt="underline"
-              />
-            ) : (
-              ""
-            )}
-          </li>
-        </Link>
-        <li
-          className="navGalerieText"
-          onMouseOver={handleMouseOver}
-          onFocus
-          onMouseLeave={handleMouseLeave}
-        >
-          <button
-            type="button"
-            className="subtextTitle"
-            onClick={() => setIsActive("galerie")}
-          >
-            Galerie
-          </button>
-          {isActive === "galerie" ? (
-            <img id="underline" className="" src={underline} alt="underline" />
-          ) : (
-            ""
-          )}
-          {isDropdownOpen && (
-            <ul id="submenu">
-              <Link to="/asoiafminiatures" className="subText">
-                <li className="text">Asoiaf</li>
-              </Link>
-              <Link to="/marvelcp" className="subText">
-                <li>Marvel CP</li>
-              </Link>
-              <Link to="/swlegion" className="subText">
-                <li>SW Legion</li>
-              </Link>
-              <Link to="/divers" className="subText">
-                <li>Figurines Divers</li>
-              </Link>
-            </ul>
-          )}
-          {isActive === "galerie" ? (
-            <img id="underline" className="" src={underline} alt="underline" />
-          ) : (
-            ""
-          )}
-        </li>
-        <Link
-          to="/battlereport"
-          className="navBR"
-          onClick={() => setIsActive("battleReport")}
-        >
-          <li className="navBRText">
-            <p>Battle Report</p>
-            {isActive === "battleReport" ? (
-              <img
-                id="underline"
-                className=""
-                src={underline}
-                alt="underline"
-              />
-            ) : (
-              ""
-            )}
-          </li>
-        </Link>
-      </ul>
+      <div id="menuContainer">
+        <ul className="menuMain">
+          <Link to="/" className="navHome linkMenu">
+            <li className="navHomeText">
+              <p>Home</p>
+            </li>
+          </Link>
+          <Link to="/about" className="navAbout linkMenu">
+            <li className="navAboutText">
+              <p>About</p>
+            </li>
+          </Link>
+          <div className="navGalerie linkMenu">
+            <li className="navGalerieText">
+              <p className="navGalerieText">Galerie</p>
+              <div className="subMenu">
+                <ul id="submenu">
+                  <Link to="/asoiafminiatures" className="subText">
+                    <li className="text">
+                      <p>Asoiaf</p>
+                    </li>
+                  </Link>
+                  <Link to="/marvelcp" className="subText">
+                    <li>
+                      <p>Marvel CP</p>
+                    </li>
+                  </Link>
+                  <Link to="/swlegion" className="subText">
+                    <li>
+                      <p>SW Legion</p>
+                    </li>
+                  </Link>
+                  <Link to="/divers" className="subText">
+                    <li>
+                      <p>Figurines Divers</p>
+                    </li>
+                  </Link>
+                </ul>
+              </div>
+            </li>
+          </div>
+          <Link to="/battlereport" className="navBR linkMenu">
+            <li className="navBRText">
+              <p>Battle Report</p>
+            </li>
+          </Link>
+        </ul>
+      </div>
     </nav>
   );
 }
