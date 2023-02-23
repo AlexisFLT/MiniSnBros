@@ -5,7 +5,7 @@
   background: rgb(232, 232, 232);
   background: linear-gradient(
     90deg,
-    rgba(232, 232, 232, 0.9556197478991597) 10%,
+    rgba(232, 232, 232, 0.95) 30%,
     rgba(199, 199, 199, 1) 100%
   );
   width: max-content;
@@ -19,9 +19,8 @@
 .navBar .menuMain {
   //nav ul
   position: relative;
-  margin: 0;
-  padding: 0;
   list-style: none;
+  display: flex;
 }
 
 .navBar li {
@@ -36,7 +35,11 @@
   text-decoration: none;
   color: App.$colorThird;
   font-family: App.$fontFamily;
-  font-size: App.$fontSize;
+  font-size: clamp(
+    calc(App.$fontSize/2),
+    App.$fontSize,
+    calc(App.$fontSize * 1.1)
+  );
 }
 
 .navBar p:hover {
@@ -44,10 +47,10 @@
   color: App.$colorSecondary;
 }
 
-.menuContainer {
-  max-width: 1000px;
-  margin: 0 auto;
-}
+// .menuContainer {
+//   max-width: 1000px;
+//   margin: 0 auto;
+// }
 
 .navBar li:hover {
   //nav li:hover
