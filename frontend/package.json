@@ -17,6 +17,7 @@
     "react-router": "^6.8.1",
     "react-router-dom": "^6.8.1",
     "sass": "^1.58.3",
+    "swiper": "^9.0.5",
     "template-fullstack": "file:.."
   },
   "devDependencies": {

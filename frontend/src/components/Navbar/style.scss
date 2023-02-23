@@ -35,11 +35,7 @@
   text-decoration: none;
   color: App.$colorThird;
   font-family: App.$fontFamily;
-  font-size: clamp(
-    calc(App.$fontSize/2),
-    App.$fontSize,
-    calc(App.$fontSize * 1.1)
-  );
+  font-size: App.$fontSize;
 }
 
 .navBar p:hover {
