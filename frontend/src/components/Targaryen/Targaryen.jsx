@@ -112,7 +112,7 @@ export default function Targaryen() {
               <img className="pictureChar" src={xaro} alt="Xaro Xhoan Daxos" />
               <figcaption className="nameCharTarg">
                 Xaro Xhoan Daxos <br />
-                <span className="subnameCharTarg">
+                <span className="subnameCharTarg xaro">
                   MERCHANT PRINCE OF QARTH
                 </span>
               </figcaption>
@@ -143,7 +143,7 @@ export default function Targaryen() {
           <SwiperSlide>
             <figure className="pictureBlock">
               <img
-                className="pictureChar"
+                className="pictureChar tall"
                 src={swordmasters}
                 alt="Unsullied Swordmasters"
               />
@@ -155,7 +155,7 @@ export default function Targaryen() {
           <SwiperSlide>
             <figure className="pictureBlock">
               <img
-                className="pictureChar"
+                className="pictureChar tall"
                 src={pikemen}
                 alt="Unsullied Pikemen"
               />
@@ -167,7 +167,7 @@ export default function Targaryen() {
           <SwiperSlide>
             <figure className="pictureBlock">
               <img
-                className="pictureChar"
+                className="pictureChar tall"
                 src={mercenaries}
                 alt="Stormcrow Mercenaries"
               />
@@ -179,7 +179,7 @@ export default function Targaryen() {
           <SwiperSlide>
             <figure className="pictureBlock">
               <img
-                className="pictureChar"
+                className="pictureChar tall"
                 src={archers}
                 alt="Stormcrow Archers"
               />
@@ -191,7 +191,7 @@ export default function Targaryen() {
           <SwiperSlide>
             <figure className="pictureBlock">
               <img
-                className="pictureChar"
+                className="pictureChar tall"
                 src={hrakkars}
                 alt="Dothraki Hrakkars"
               />
@@ -203,7 +203,7 @@ export default function Targaryen() {
           <SwiperSlide>
             <figure className="pictureBlock">
               <img
-                className="pictureChar"
+                className="pictureChar tall"
                 src={bloodriders}
                 alt="Drogos' Bloodriders"
               />
@@ -215,7 +215,7 @@ export default function Targaryen() {
           <SwiperSlide>
             <figure className="pictureBlock">
               <img
-                className="pictureChar"
+                className="pictureChar tall"
                 src={screamers}
                 alt="Dothraki Screamers"
               />
