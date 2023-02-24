@@ -28,8 +28,6 @@ export default function Neutral() {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         slidesPerView={1}
         navigation
-        grabCursor="true"
-        loop="true"
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
