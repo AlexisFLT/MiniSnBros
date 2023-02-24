@@ -44,11 +44,6 @@
   color: App.$colorSecondary;
 }
 
-// .menuContainer {
-//   max-width: 1000px;
-//   margin: 0 auto;
-// }
-
 .navBar li:hover {
   //nav li:hover
   background-color: App.$colorBG;
@@ -101,3 +96,40 @@
     opacity: 1;
   }
 }
+
+//SMARTPHONE
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .navBar p {
+    //nav a
+    padding: 0.5em 1.5em;
+    font-size: calc(App.$fontSize / 1.5);
+  }
+  .navBar {
+    //nav
+    width: auto;
+  }
+}
+
+// @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+
+// }
+
+//PAD
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
+  .navBar p {
+    //nav a
+    padding: 0.5em 1.5em;
+    font-size: calc(App.$fontSize / 1.2);
+  }
+  .navBar {
+    //nav
+  }
+}
+
+//large screen
+
+// @media only screen and (min-width: 1250px) {
+
+// }

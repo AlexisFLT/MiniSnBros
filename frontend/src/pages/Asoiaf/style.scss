@@ -33,3 +33,35 @@
     both;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s both;
 }
+//SMARTPHONE
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .titlePage {
+    font-size: calc(App.$fontSizeTitle / 1.5);
+    margin-top: 15%;
+    margin-bottom: 2%;
+  }
+  .neutral,
+  .targaryen {
+    height: 40vh;
+  }
+}
+
+// @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+
+// }
+
+//PAD
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
+  .neutral,
+  .targaryen {
+    height: 90vh;
+  }
+}
+
+//large screen
+
+// @media only screen and (min-width: 1250px) {
+
+// }

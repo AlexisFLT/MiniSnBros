@@ -1,28 +1,18 @@
 @use "../../App.scss";
 
 .factionTitleNeutr {
-  font-family: App.$fontFamily;
-}
-
-.factionTitleNeutr {
   font-size: calc(App.$fontSizeTitle / 1.2);
   padding-top: 2%;
   color: App.$colorNeutr;
   text-align: left;
   text-decoration: underline double App.$colorNeutr 2px;
   margin-left: 30%;
+  font-family: App.$fontFamily;
 }
 
 .pictureBlock {
-  padding-top: 5%;
   display: grid;
   place-content: center;
-}
-
-.pictureChar {
-  height: 35vh;
-  -webkit-filter: drop-shadow(5px 5px 5px black);
-  filter: drop-shadow(10px 5px 20px black);
 }
 
 .nameCharNeutr {
@@ -31,7 +21,6 @@
   padding-top: 0.5em;
   text-align: center;
   color: App.$colorNeutr;
-  height: 3.5em;
 }
 
 .subnameCharNeutr {
@@ -65,4 +54,77 @@
 
 .prevButtonNeutr {
   margin-left: 20%;
+}
+
+.nextButtonNeutr {
+  margin-right: unset;
+}
+.prevButtonNeutr {
+  margin-left: unset;
+}
+.iconPrevNeutr,
+.iconNextNeutr {
+  font-size: calc(App.$fontSize);
+}
+.swiper-pagination-bullet {
+  height: 0.3em;
+  width: 0.3em;
+}
+
+//SMARTPHONE
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .factionTitleNeutr {
+    font-size: calc(App.$fontSizeTitle / 2);
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-family: App.$fontFamily;
+  }
+  .nextButtonNeutr {
+    margin-right: unset;
+  }
+  .prevButtonNeutr {
+    margin-left: unset;
+  }
+  .iconPrevNeutr,
+  .iconNextNeutr {
+    font-size: calc(App.$fontSize);
+  }
+  .nameCharNeutr {
+    font-size: calc(App.$fontSize / 1.5);
+  }
+  .subnameCharNeutr {
+    font-size: calc(App.$fontSize / 2);
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
+  .factionTitleNeutr {
+    font-size: calc(App.$fontSizeTitle / 1.5);
+    margin-left: 5%;
+    // margin-bottom: 5%;
+  }
+  .nextButtonNeutr {
+    margin-right: 20%;
+  }
+  .prevButtonNeutr {
+    margin-left: 20%;
+  }
+  .iconPrevNeutr,
+  .iconNextNeutr {
+    font-size: calc(App.$fontSize);
+  }
+  .swiper-pagination-bullet {
+    height: 0.5em;
+    width: 0.5em;
+  }
+  .pictureChar {
+    height: 45vh;
+    -webkit-filter: unset;
+    filter: unset;
+  }
+  .pictureBlock {
+    padding-top: 5%;
+    margin-top: unset;
+  }
 }

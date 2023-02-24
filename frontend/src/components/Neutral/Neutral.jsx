@@ -88,7 +88,7 @@ export default function Neutral() {
           <SwiperSlide>
             <figure className="pictureBlock">
               <img
-                className="pictureChar"
+                className="pictureChar tall"
                 src={blackguards}
                 alt="Bolton Blackguards"
               />
@@ -99,7 +99,7 @@ export default function Neutral() {
           </SwiperSlide>
           <SwiperSlide>
             <figure className="pictureBlock">
-              <img className="pictureChar" src={flayed} alt="Flayed Men" />
+              <img className="pictureChar tall" src={flayed} alt="Flayed Men" />
               <figcaption className="nameCharNeutr">
                 House Bolton Flayed Men
               </figcaption>
@@ -107,7 +107,11 @@ export default function Neutral() {
           </SwiperSlide>
           <SwiperSlide>
             <figure className="pictureBlock">
-              <img className="pictureChar" src={flayed2} alt="Flayed Men" />
+              <img
+                className="pictureChar tall"
+                src={flayed2}
+                alt="Flayed Men"
+              />
               <figcaption className="nameCharNeutr">
                 House Bolton Flayed Men <br />
                 <span className="subnameCharNeutr">(zoom)</span>
@@ -116,7 +120,11 @@ export default function Neutral() {
           </SwiperSlide>
           <SwiperSlide>
             <figure className="pictureBlock">
-              <img className="pictureChar" src={flayedFL} alt="Flayed Men" />
+              <img
+                className="pictureChar tall"
+                src={flayedFL}
+                alt="Flayed Men"
+              />
               <figcaption className="nameCharNeutr">
                 House Bolton Flayed Men <br />
                 <span className="subnameCharNeutr">(Flank)</span>
@@ -125,13 +133,21 @@ export default function Neutral() {
           </SwiperSlide>
           <SwiperSlide>
             <figure className="pictureBlock">
-              <img className="pictureChar" src={hedgeK} alt="Hedge Knights" />
+              <img
+                className="pictureChar tall"
+                src={hedgeK}
+                alt="Hedge Knights"
+              />
               <figcaption className="nameCharNeutr">Hedge Knights</figcaption>
             </figure>
           </SwiperSlide>
           <SwiperSlide>
             <figure className="pictureBlock">
-              <img className="pictureChar" src={hedgeK2} alt="Hedge Knights" />
+              <img
+                className="pictureChar tall"
+                src={hedgeK2}
+                alt="Hedge Knights"
+              />
               <figcaption className="nameCharNeutr">
                 Hedge Knights <br />
                 <span className="subnameCharNeutr">(Flank)</span>
@@ -140,7 +156,11 @@ export default function Neutral() {
           </SwiperSlide>
           <SwiperSlide>
             <figure className="pictureBlock">
-              <img className="pictureChar" src={hedgeK3} alt="Hedge Knights" />
+              <img
+                className="pictureChar tall"
+                src={hedgeK3}
+                alt="Hedge Knights"
+              />
               <figcaption className="nameCharNeutr">
                 Hedge Knights <br />
                 <span className="subnameCharNeutr">(Flank zoom)</span>

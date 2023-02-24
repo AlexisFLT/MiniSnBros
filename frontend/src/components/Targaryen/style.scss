@@ -11,13 +11,14 @@
 }
 
 .pictureBlock {
-  padding-top: 5%;
-  display: grid;
-  place-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
 }
 
 .pictureChar {
-  height: 35vh;
+  height: App.$pictureSize;
   -webkit-filter: drop-shadow(5px 5px 5px black);
   filter: drop-shadow(10px 5px 20px black);
 }
@@ -27,12 +28,17 @@
   font-family: App.$fontFamily;
   padding-top: 0.5em;
   text-align: center;
+  vertical-align: center;
   color: App.$colorTarg;
-  height: 3.5em;
 }
 
 .subnameCharTarg {
   font-size: calc(App.$fontSize / 1.5);
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 2%;
 }
 
 .swiperTarg > .swiper-pagination-bullets {
@@ -68,3 +74,89 @@
 .prevButtonTarg {
   margin-left: 20%;
 }
+
+//SMARTPHONE
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .factionTitleTarg {
+    font-size: calc(App.$fontSizeTitle / 2);
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+  .nextButtonTarg {
+    margin-right: unset;
+  }
+  .prevButtonTarg {
+    margin-left: unset;
+  }
+  .iconPrevTarg,
+  .iconNextTarg {
+    font-size: calc(App.$fontSize);
+  }
+  .swiper-pagination-bullet {
+    height: 0.3em;
+    width: 0.3em;
+  }
+  .nameCharTarg {
+    font-size: calc(App.$fontSize / 1.5);
+  }
+  .pictureChar {
+    height: 20vh;
+    padding-top: 10%;
+    -webkit-filter: unset;
+    filter: unset;
+  }
+  .subnameCharTarg {
+    font-size: calc(App.$fontSize / 2);
+  }
+  .xaro {
+    font-size: calc(App.$fontSize / 3);
+  }
+  .pictureBlock {
+    padding-top: 5%;
+    margin-top: unset;
+  }
+}
+
+// @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+
+// }
+
+//PAD
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
+  .factionTitleTarg {
+    font-size: calc(App.$fontSizeTitle / 1.5);
+    margin-left: 5%;
+    // margin-bottom: 5%;
+  }
+  .nextButtonTarg {
+    margin-right: 20%;
+  }
+  .prevButtonTarg {
+    margin-left: 20%;
+  }
+  .iconPrevTarg,
+  .iconNextTarg {
+    font-size: calc(App.$fontSize);
+  }
+  .swiper-pagination-bullet {
+    height: 0.5em;
+    width: 0.5em;
+  }
+  .pictureChar {
+    height: 45vh;
+    -webkit-filter: unset;
+    filter: unset;
+  }
+  .pictureBlock {
+    padding-top: 5%;
+    margin-top: unset;
+  }
+}
+
+//large screen
+
+// @media only screen and (min-width: 1250px) {
+
+// }
