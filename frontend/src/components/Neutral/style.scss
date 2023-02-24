@@ -25,16 +25,16 @@
   filter: drop-shadow(10px 5px 20px black);
 }
 
-.nameChar {
+.nameCharNeutr {
   font-size: App.$fontSize;
   font-family: App.$fontFamily;
   padding-top: 0.5em;
   text-align: center;
-  color: App.$colorTarg;
+  color: App.$colorNeutr;
   height: 3.5em;
 }
 
-.subnameChar {
+.subnameCharNeutr {
   font-size: calc(App.$fontSize / 1.5);
 }
 
@@ -47,4 +47,22 @@
 .swiper-pagination-bullet {
   height: 0.8em;
   width: 0.8em;
+}
+
+.slideButtonNeutr {
+  border: none;
+  background-color: transparent;
+}
+
+.nextButtonNeutr {
+  margin-right: 20%;
+}
+.iconPrevNeutr,
+.iconNextNeutr {
+  font-size: calc(App.$fontSize * 2.5);
+  color: App.$colorNeutr;
+}
+
+.prevButtonNeutr {
+  margin-left: 20%;
 }

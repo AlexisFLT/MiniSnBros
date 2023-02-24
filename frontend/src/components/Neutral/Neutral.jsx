@@ -4,6 +4,8 @@
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
 /* eslint-disable import/no-unresolved */
 import { Swiper, SwiperSlide } from "swiper/react";
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
+import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
@@ -20,109 +22,140 @@ import hedgeK3 from "../../assets/figurines/sans fond/HK4.png";
 import "./style.scss";
 
 export default function Neutral() {
+  const swiperRef = useRef();
+
+  const sliderSettings = {
+    440: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+  };
+
   return (
     <section className="NeutralPage">
       <h2 className="factionTitleNeutr">Neutral</h2>
-      <Swiper
-        className="swiperNeutr"
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-      >
-        <SwiperSlide>
-          <figure className="pictureBlock">
-            <img className="pictureChar" src={baelish} alt="Petyr Baelish" />
-            <figcaption className="nameChar">
-              Petyr Baelish <br />
-              <span className="subnameChar">LITTLEFINGER</span>
-            </figcaption>
-          </figure>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure className="pictureBlock">
-            <img className="pictureChar" src={tycho} alt="Tycho Nestoris" />
-            <figcaption className="nameChar">
-              Tycho Nestoris <br />
-              <span className="subnameChar">IRON BANKER</span>
-            </figcaption>
-          </figure>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure className="pictureBlock">
-            <img className="pictureChar" src={varys} alt="Lord Varys" />
-            <figcaption className="nameChar">
-              Lord Varys <br />
-              <span className="subnameChar">THE SPIDER</span>
-            </figcaption>
-          </figure>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure className="pictureBlock">
-            <img
-              className="pictureChar"
-              src={blackguards}
-              alt="Bolton Blackguards"
-            />
-            <figcaption className="nameChar">
-              House Bolton Blackguards
-            </figcaption>
-          </figure>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure className="pictureBlock">
-            <img className="pictureChar" src={flayed} alt="Flayed Men" />
-            <figcaption className="nameChar">
-              House Bolton Flayed Men
-            </figcaption>
-          </figure>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure className="pictureBlock">
-            <img className="pictureChar" src={flayed2} alt="Flayed Men" />
-            <figcaption className="nameChar">
-              House Bolton Flayed Men <br />
-              <span className="subnameChar">(zoom)</span>
-            </figcaption>
-          </figure>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure className="pictureBlock">
-            <img className="pictureChar" src={flayedFL} alt="Flayed Men" />
-            <figcaption className="nameChar">
-              House Bolton Flayed Men <br />
-              <span className="subnameChar">(Flank)</span>
-            </figcaption>
-          </figure>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure className="pictureBlock">
-            <img className="pictureChar" src={hedgeK} alt="Hedge Knights" />
-            <figcaption className="nameChar">Hedge Knights</figcaption>
-          </figure>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure className="pictureBlock">
-            <img className="pictureChar" src={hedgeK2} alt="Hedge Knights" />
-            <figcaption className="nameChar">
-              Hedge Knights <br />
-              <span className="subnameChar">(Flank)</span>
-            </figcaption>
-          </figure>
-        </SwiperSlide>
-        <SwiperSlide>
-          <figure className="pictureBlock">
-            <img className="pictureChar" src={hedgeK3} alt="Hedge Knights" />
-            <figcaption className="nameChar">
-              Hedge Knights <br />
-              <span className="subnameChar">(Flank zoom)</span>
-            </figcaption>
-          </figure>
-        </SwiperSlide>
-      </Swiper>
+      <div className="swiperBlock">
+        <button
+          className="prevButtonNeutr slideButtonNeutr"
+          type="button"
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          <MdNavigateBefore className="iconPrevNeutr" />
+        </button>
+        <Swiper
+          className="swiperNeutr"
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          slidesPerView={1}
+          breakpoints={sliderSettings}
+          onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          // eslint-disable-next-line no-restricted-syntax
+          onSwiper={(swiper) => console.log(swiper)}
+          // eslint-disable-next-line no-restricted-syntax
+          onSlideChange={() => console.log("slide change")}
+        >
+          <SwiperSlide>
+            <figure className="pictureBlock">
+              <img className="pictureChar" src={baelish} alt="Petyr Baelish" />
+              <figcaption className="nameCharNeutr">
+                Petyr Baelish <br />
+                <span className="subnameCharNeutr">LITTLEFINGER</span>
+              </figcaption>
+            </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+            <figure className="pictureBlock">
+              <img className="pictureChar" src={tycho} alt="Tycho Nestoris" />
+              <figcaption className="nameCharNeutr">
+                Tycho Nestoris <br />
+                <span className="subnameCharNeutr">IRON BANKER</span>
+              </figcaption>
+            </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+            <figure className="pictureBlock">
+              <img className="pictureChar" src={varys} alt="Lord Varys" />
+              <figcaption className="nameCharNeutr">
+                Lord Varys <br />
+                <span className="subnameCharNeutr">THE SPIDER</span>
+              </figcaption>
+            </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+            <figure className="pictureBlock">
+              <img
+                className="pictureChar"
+                src={blackguards}
+                alt="Bolton Blackguards"
+              />
+              <figcaption className="nameCharNeutr">
+                House Bolton Blackguards
+              </figcaption>
+            </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+            <figure className="pictureBlock">
+              <img className="pictureChar" src={flayed} alt="Flayed Men" />
+              <figcaption className="nameCharNeutr">
+                House Bolton Flayed Men
+              </figcaption>
+            </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+            <figure className="pictureBlock">
+              <img className="pictureChar" src={flayed2} alt="Flayed Men" />
+              <figcaption className="nameCharNeutr">
+                House Bolton Flayed Men <br />
+                <span className="subnameCharNeutr">(zoom)</span>
+              </figcaption>
+            </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+            <figure className="pictureBlock">
+              <img className="pictureChar" src={flayedFL} alt="Flayed Men" />
+              <figcaption className="nameCharNeutr">
+                House Bolton Flayed Men <br />
+                <span className="subnameCharNeutr">(Flank)</span>
+              </figcaption>
+            </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+            <figure className="pictureBlock">
+              <img className="pictureChar" src={hedgeK} alt="Hedge Knights" />
+              <figcaption className="nameCharNeutr">Hedge Knights</figcaption>
+            </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+            <figure className="pictureBlock">
+              <img className="pictureChar" src={hedgeK2} alt="Hedge Knights" />
+              <figcaption className="nameCharNeutr">
+                Hedge Knights <br />
+                <span className="subnameCharNeutr">(Flank)</span>
+              </figcaption>
+            </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+            <figure className="pictureBlock">
+              <img className="pictureChar" src={hedgeK3} alt="Hedge Knights" />
+              <figcaption className="nameCharNeutr">
+                Hedge Knights <br />
+                <span className="subnameCharNeutr">(Flank zoom)</span>
+              </figcaption>
+            </figure>
+          </SwiperSlide>
+        </Swiper>
+        <button
+          className="nextButtonNeutr slideButtonNeutr"
+          type="button"
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          <MdNavigateNext className="iconNextNeutr" />
+        </button>
+      </div>
     </section>
   );
 }

@@ -22,7 +22,7 @@
   filter: drop-shadow(10px 5px 20px black);
 }
 
-.nameChar {
+.nameCharTarg {
   font-size: App.$fontSize;
   font-family: App.$fontFamily;
   padding-top: 0.5em;
@@ -31,7 +31,7 @@
   height: 3.5em;
 }
 
-.subnameChar {
+.subnameCharTarg {
   font-size: calc(App.$fontSize / 1.5);
 }
 
@@ -44,4 +44,27 @@
 .swiper-pagination-bullet {
   height: 0.8em;
   width: 0.8em;
+}
+
+.swiperBlock {
+  display: flex;
+  align-items: center;
+}
+
+.slideButtonTarg {
+  border: none;
+  background-color: transparent;
+}
+
+.nextButtonTarg {
+  margin-right: 20%;
+}
+.iconPrevTarg,
+.iconNextTarg {
+  font-size: calc(App.$fontSize * 2.5);
+  color: App.$colorTarg;
+}
+
+.prevButtonTarg {
+  margin-left: 20%;
 }
