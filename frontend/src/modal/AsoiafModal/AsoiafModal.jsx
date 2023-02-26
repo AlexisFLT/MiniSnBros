@@ -47,7 +47,7 @@ export default function AsoiafModal(props) {
           conditions de victoire, etc.
         </p>
       </div>
-      <div className="modal-footer">
+      <div className="modalFooterAsoiaf">
         <button type="button" onClick={props.onClose} id="buttonClose">
           <ImCross className="closeIcon" />
         </button>

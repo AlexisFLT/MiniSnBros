@@ -92,10 +92,6 @@
 //Medium screen
 
 @media only screen and (min-width: 1250px) and (max-width: 1440px) {
-  .aboutPage {
-    // overflow: scroll;
-  }
-
   .paragraph1,
   .paragraph2 {
     font-size: calc(App.$fontSize/1.2);

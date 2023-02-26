@@ -170,6 +170,21 @@
   }
 }
 
+//Medium screen
+
+@media only screen and (min-width: 1250px) and (max-width: 1440px) {
+  .modal {
+    height: fit-content;
+    width: 80%;
+  }
+  .modalTitle {
+    margin-top: 1em;
+  }
+  .modalFooterAsoiaf {
+    margin-bottom: 1em;
+  }
+}
+
 //large screen
 
 // @media only screen and (min-width: 1250px) {
