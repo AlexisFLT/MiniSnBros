@@ -12,6 +12,27 @@
   text-align: center;
 }
 
+.asoiafModal {
+  display: grid;
+  place-content: center;
+}
+
+.learnMoreButton {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  background-color: App.$colorTarg;
+  border: none;
+  padding: 1em;
+  border-radius: 0.5em;
+  color: App.$colorBG;
+  font-family: App.$fontFamily;
+  font-weight: 900;
+  font-size: calc(App.$fontSize / 1.5);
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
 .titlePage {
   font-family: App.$fontFamily;
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
@@ -33,17 +54,26 @@
     both;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s both;
 }
+
 //SMARTPHONE
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .titlePage {
     font-size: calc(App.$fontSizeTitle / 1.5);
-    margin-top: 15%;
+    margin-top: 20%;
     margin-bottom: 2%;
   }
   .neutral,
   .targaryen {
     height: 40vh;
+  }
+
+  .learnMoreButton {
+    padding: 0.5em;
+    top: 7%;
+    left: 25%;
+    transform: translate(50%, -50%);
+    font-size: calc(App.$fontSize / 2.5);
   }
 }
 
@@ -57,6 +87,14 @@
   .neutral,
   .targaryen {
     height: 90vh;
+  }
+  .titlePage {
+    margin-top: 15%;
+  }
+  .learnMoreButton {
+    padding: 1em;
+    top: 15%;
+    font-size: calc(App.$fontSize / 2);
   }
 }
 

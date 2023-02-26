@@ -46,6 +46,7 @@
 .nextButtonNeutr {
   margin-right: 20%;
 }
+
 .iconPrevNeutr,
 .iconNextNeutr {
   font-size: calc(App.$fontSize * 2.5);
@@ -56,16 +57,6 @@
   margin-left: 20%;
 }
 
-.nextButtonNeutr {
-  margin-right: unset;
-}
-.prevButtonNeutr {
-  margin-left: unset;
-}
-.iconPrevNeutr,
-.iconNextNeutr {
-  font-size: calc(App.$fontSize);
-}
 .swiper-pagination-bullet {
   height: 0.3em;
   width: 0.3em;
@@ -77,7 +68,7 @@
   .factionTitleNeutr {
     font-size: calc(App.$fontSizeTitle / 2);
     margin-left: 5%;
-    margin-bottom: 5%;
+    margin-top: 5%;
     font-family: App.$fontFamily;
   }
   .nextButtonNeutr {
