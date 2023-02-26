@@ -13,9 +13,19 @@ export default function AsoiafModal(props) {
   return (
     <div className="modal">
       <div className="modalcontent">
-        <img className="cmon" src={cmon} alt="Cmon logo" />
+        <img
+          className="cmon"
+          src={cmon}
+          alt="Cmon logo"
+          href="https://www.cmon.com/"
+        />
         <h1 className="modalTitle">À Propos du jeu</h1>
-        <img className="asoiafL" src={asoiaf} alt="Asoiaf logo" />
+        <img
+          className="asoiafL"
+          src={asoiaf}
+          alt="Asoiaf logo"
+          href="https://asoiaf.cmon.com/"
+        />
       </div>
       <div className="modalBody">
         <p className="resumeBlock">
