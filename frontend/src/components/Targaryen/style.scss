@@ -65,6 +65,7 @@
 .nextButtonTarg {
   margin-right: 20%;
 }
+
 .iconPrevTarg,
 .iconNextTarg {
   font-size: calc(App.$fontSize * 2.5);
@@ -81,7 +82,7 @@
   .factionTitleTarg {
     font-size: calc(App.$fontSizeTitle / 2);
     margin-left: 5%;
-    margin-bottom: 5%;
+    margin-top: 5%;
   }
   .nextButtonTarg {
     margin-right: unset;

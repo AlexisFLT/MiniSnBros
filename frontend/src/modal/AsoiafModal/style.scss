@@ -1,0 +1,177 @@
+@use "../../App.scss";
+
+.modal {
+  position: fixed;
+  height: 60%;
+  width: 60%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  background-color: App.$colorThird;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 20;
+  -webkit-animation: slide-in-top 1s ease-out forwards;
+  animation: slide-in-top 1s ease-out forwards;
+}
+
+.modalcontent {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  & > img {
+    height: 4em;
+    position: absolute;
+  }
+}
+
+.cmon {
+  top: 0;
+  left: 5%;
+}
+
+.asoiafL {
+  top: 0;
+  right: 5%;
+}
+
+.modalTitle {
+  font-family: App.$fontFamily;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  color: App.$colorSecondary;
+}
+
+.modalBody {
+  width: 60%;
+
+  & > p {
+    margin: 1em;
+    font-family: App.$fontFamily;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    color: App.$colorBG;
+    gap: 2rem;
+    line-height: 1.4rem;
+    letter-spacing: 1px;
+  }
+}
+
+.resumeBlock {
+  text-indent: calc(App.$fontSize * 2.5);
+}
+
+#buttonClose {
+  border: none;
+  background-color: transparent;
+  font-size: calc(App.$fontSize / 1.5);
+  color: App.$colorFourth;
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .modal {
+    position: fixed;
+    height: unset;
+    width: unset;
+  }
+
+  .modalBody {
+    width: unset;
+
+    & > p {
+      font-family: App.$fontFamily;
+      line-height: 1rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  .modalTitle {
+    font-family: App.$fontFamily;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: App.$colorSecondary;
+  }
+
+  .modalBody {
+    width: unset;
+
+    & > p {
+      font-size: clamp(0.8rem, 1.5vw, 1rem);
+    }
+  }
+
+  .modalcontent {
+    & > img {
+      height: 3em;
+    }
+  }
+}
+
+// @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+
+// }
+
+//PAD
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
+  .modal {
+    height: unset;
+    width: unset;
+    justify-content: center;
+  }
+
+  .modalBody {
+    width: unset;
+    margin: 2%;
+
+    & > p {
+      line-height: 1.1rem;
+      letter-spacing: 1.2px;
+      margin-top: 2%;
+    }
+  }
+
+  .modalTitle {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+  }
+
+  .modalcontent {
+    & > img {
+      height: 3em;
+    }
+  }
+}
+
+//large screen
+
+// @media only screen and (min-width: 1250px) {
+
+// }
