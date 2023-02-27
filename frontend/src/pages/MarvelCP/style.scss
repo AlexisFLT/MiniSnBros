@@ -1,0 +1,158 @@
+@use "../../App.scss";
+
+.affTitleGuard {
+  font-size: calc(App.$fontSizeTitle / 1.2);
+  padding-top: 2%;
+  color: App.$colorGuard;
+  text-align: left;
+  text-decoration: underline double App.$colorGuard 2px;
+  margin-left: 10%;
+  font-family: App.$fontFamily;
+}
+
+.pictureBlock {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.pictureChar {
+  height: App.$pictureSize;
+  -webkit-filter: drop-shadow(5px 5px 5px black);
+  filter: drop-shadow(10px 5px 20px black);
+}
+
+.nameCharGuard {
+  font-size: App.$fontSize;
+  font-family: App.$fontFamily;
+  padding-top: 0.5em;
+  text-align: center;
+  vertical-align: center;
+  color: App.$colorGuard;
+}
+
+.subnameCharGuard {
+  font-size: calc(App.$fontSize / 1.5);
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 2%;
+}
+
+.swiperGuard > .swiper-pagination-bullets {
+  --swiper-theme-color: rgb(35, 6, 66);
+  height: 1em;
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  height: 0.8em;
+  width: 0.8em;
+}
+
+.swiperBlock {
+  display: flex;
+  align-items: center;
+}
+
+.slideButtonGuard {
+  border: none;
+  background-color: transparent;
+}
+
+.nextButtonGuard {
+  margin-right: 20%;
+}
+
+.iconPrevGuard,
+.iconNextGuard {
+  font-size: calc(App.$fontSize * 2.5);
+  color: App.$colorGuard;
+}
+
+.prevButtonGuard {
+  margin-left: 20%;
+}
+
+//SMARTPHONE
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .affTitleGuard {
+    font-size: calc(App.$fontSizeTitle / 2);
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+  .nextButtonGuard {
+    margin-right: unset;
+  }
+  .prevButtonGuard {
+    margin-left: unset;
+  }
+  .iconPrevGuard,
+  .iconNextGuard {
+    font-size: calc(App.$fontSize);
+  }
+  .swiper-pagination-bullet {
+    height: 0.3em;
+    width: 0.3em;
+  }
+  .nameCharGuard {
+    font-size: calc(App.$fontSize / 1.5);
+  }
+  .pictureChar {
+    height: 20vh;
+    padding-top: 10%;
+    -webkit-filter: unset;
+    filter: unset;
+  }
+
+  .pictureBlock {
+    padding-top: 5%;
+    margin-top: unset;
+  }
+}
+
+// @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+
+// }
+
+//PAD
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
+  .affTitleGuard {
+    font-size: calc(App.$fontSizeTitle / 1.5);
+    margin-left: 5%;
+    // margin-bottom: 5%;
+  }
+  .nextButtonGuard {
+    margin-right: 20%;
+  }
+  .prevButtonGuard {
+    margin-left: 20%;
+  }
+  .iconPrevGuard,
+  .iconNextGuard {
+    font-size: calc(App.$fontSize);
+  }
+  .swiper-pagination-bullet {
+    height: 0.5em;
+    width: 0.5em;
+  }
+  .pictureChar {
+    height: 45vh;
+    -webkit-filter: unset;
+    filter: unset;
+  }
+  .pictureBlock {
+    padding-top: 5%;
+    margin-top: unset;
+  }
+}
+
+//large screen
+
+// @media only screen and (min-width: 1250px) {
+
+// }
