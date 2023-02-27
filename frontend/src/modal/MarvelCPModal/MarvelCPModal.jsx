@@ -1,5 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import { ImCross } from "react-icons/im";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import mcp from "../../assets/mcpLogo/mcp.png";
 import atomic from "../../assets/mcpLogo/atomic.png";
@@ -13,19 +14,13 @@ export default function MarvelCPModal(props) {
   return (
     <div className="modal">
       <div className="modalcontent">
-        <img
-          className="atomic"
-          src={atomic}
-          alt="AtomicMassGame logo"
-          href="https://www.atomicmassgames.com/"
-        />
+        <Link to="https://www.atomicmassgames.com/">
+          <img className="atomic" src={atomic} alt="AtomicMassGame logo" />
+        </Link>
         <h1 className="modalTitle">À Propos du jeu</h1>
-        <img
-          className="mcpL"
-          src={mcp}
-          alt="Marvel Crisis Protocol logo"
-          href="https://www.atomicmassgames.com/"
-        />
+        <Link to="https://www.atomicmassgames.com/gallery-index">
+          <img className="mcpL" src={mcp} alt="Marvel Crisis Protocol logo" />
+        </Link>
       </div>
       <div className="modalBody">
         <p className="resumeBlock">

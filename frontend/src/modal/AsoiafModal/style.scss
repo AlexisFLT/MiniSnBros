@@ -24,20 +24,21 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
 
-  & > img {
-    height: 4em;
-    position: absolute;
-  }
+.cmon,
+.asoiafL {
+  height: 4em;
+  position: absolute;
 }
 
 .cmon {
-  top: 0;
+  top: 10%;
   left: 5%;
 }
 
 .asoiafL {
-  top: 0;
+  top: 10%;
   right: 5%;
 }
 

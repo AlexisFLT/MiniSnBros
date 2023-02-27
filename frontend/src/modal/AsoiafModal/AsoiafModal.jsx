@@ -1,5 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import { ImCross } from "react-icons/im";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import asoiaf from "../../assets/asoiafLogo/asoiaf.png";
 import cmon from "../../assets/asoiafLogo/cmonLogo.png";
@@ -13,19 +14,13 @@ export default function AsoiafModal(props) {
   return (
     <div className="modal">
       <div className="modalcontent">
-        <img
-          className="cmon"
-          src={cmon}
-          alt="Cmon logo"
-          href="https://www.cmon.com/"
-        />
+        <Link to="https://www.cmon.com/">
+          <img className="cmon" src={cmon} alt="Cmon logo" />
+        </Link>
         <h1 className="modalTitle">À Propos du jeu</h1>
-        <img
-          className="asoiafL"
-          src={asoiaf}
-          alt="Asoiaf logo"
-          href="https://asoiaf.cmon.com/"
-        />
+        <Link to="https://asoiaf.cmon.com/">
+          <img className="asoiafL" src={asoiaf} alt="Asoiaf logo" />
+        </Link>
       </div>
       <div className="modalBody">
         <p className="resumeBlock">
