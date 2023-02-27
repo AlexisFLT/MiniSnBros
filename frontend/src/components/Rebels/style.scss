@@ -1,15 +1,13 @@
 @use "../../App.scss";
 
-.affTitleGuard {
+.affTitleReb {
   font-size: calc(App.$fontSizeTitle / 1.2);
   padding-top: 2%;
-  color: App.$colorGuard;
+  color: App.$colorReb;
   text-align: left;
-  text-decoration: underline double App.$colorGuard 2px;
+  text-decoration: underline double App.$colorReb 2px;
   margin-left: 10%;
   font-family: App.$fontFamily;
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 .pictureBlock {
@@ -25,16 +23,16 @@
   filter: drop-shadow(10px 5px 20px black);
 }
 
-.nameCharGuard {
+.nameCharReb {
   font-size: App.$fontSize;
   font-family: App.$fontFamily;
   padding-top: 0.5em;
   text-align: center;
   vertical-align: center;
-  color: App.$colorGuard;
+  color: App.$colorReb;
 }
 
-.subnameCharGuard {
+.subnameCharReb {
   font-size: calc(App.$fontSize / 1.5);
 }
 
@@ -43,8 +41,8 @@
   margin-top: 2%;
 }
 
-.swiperGuard > .swiper-pagination-bullets {
-  --swiper-theme-color: rgb(35, 6, 66);
+.swiperReb > .swiper-pagination-bullets {
+  --swiper-theme-color: rgb(200, 26, 32);
   height: 1em;
   width: 100%;
 }
@@ -59,48 +57,48 @@
   align-items: center;
 }
 
-.slideButtonGuard {
+.slideButtonReb {
   border: none;
   background-color: transparent;
 }
 
-.nextButtonGuard {
+.nextButtonReb {
   margin-right: 20%;
 }
 
-.iconPrevGuard,
-.iconNextGuard {
+.iconPrevReb,
+.iconNextReb {
   font-size: calc(App.$fontSize * 2.5);
-  color: App.$colorGuard;
+  color: App.$colorReb;
 }
 
-.prevButtonGuard {
+.prevButtonReb {
   margin-left: 20%;
 }
 
 //SMARTPHONE
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-  .affTitleGuard {
+  .affTitleReb {
     font-size: calc(App.$fontSizeTitle / 2);
     margin-left: 5%;
     margin-top: 5%;
   }
-  .nextButtonGuard {
+  .nextButtonReb {
     margin-right: unset;
   }
-  .prevButtonGuard {
+  .prevButtonReb {
     margin-left: unset;
   }
-  .iconPrevGuard,
-  .iconNextGuard {
+  .iconPrevReb,
+  .iconNextReb {
     font-size: calc(App.$fontSize);
   }
   .swiper-pagination-bullet {
     height: 0.3em;
     width: 0.3em;
   }
-  .nameCharGuard {
+  .nameCharReb {
     font-size: calc(App.$fontSize / 1.5);
   }
   .pictureChar {
@@ -123,19 +121,19 @@
 //PAD
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
-  .affTitleGuard {
+  .affTitleReb {
     font-size: calc(App.$fontSizeTitle / 1.5);
     margin-left: 5%;
     // margin-bottom: 5%;
   }
-  .nextButtonGuard {
+  .nextButtonReb {
     margin-right: 20%;
   }
-  .prevButtonGuard {
+  .prevButtonReb {
     margin-left: 20%;
   }
-  .iconPrevGuard,
-  .iconNextGuard {
+  .iconPrevReb,
+  .iconNextReb {
     font-size: calc(App.$fontSize);
   }
   .swiper-pagination-bullet {

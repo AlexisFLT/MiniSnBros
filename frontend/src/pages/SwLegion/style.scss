@@ -1,6 +1,6 @@
 @use "../../App.scss";
 
-.mcpPage {
+.swlPage {
   background-color: App.$colorBG;
 }
 
@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-.mcpModal {
+.swlModal {
   display: grid;
   place-content: center;
 }
@@ -39,11 +39,11 @@
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
-.guardians {
+.rebels {
   height: 65vh;
 }
 
-.guardians {
+.rebels {
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -72,7 +72,7 @@
 //PAD
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
-  .guardians {
+  .rebels {
     height: 90vh;
   }
   .titlePage {
