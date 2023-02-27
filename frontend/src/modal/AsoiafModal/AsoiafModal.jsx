@@ -14,11 +14,11 @@ export default function AsoiafModal(props) {
   return (
     <div className="modal">
       <div className="modalcontent">
-        <Link to="https://www.cmon.com/">
+        <Link to="https://www.cmon.com/" target="_blank">
           <img className="cmon" src={cmon} alt="Cmon logo" />
         </Link>
         <h1 className="modalTitle">À Propos du jeu</h1>
-        <Link to="https://asoiaf.cmon.com/">
+        <Link to="https://asoiaf.cmon.com/" target="_blank">
           <img className="asoiafL" src={asoiaf} alt="Asoiaf logo" />
         </Link>
       </div>

@@ -14,11 +14,14 @@ export default function MarvelCPModal(props) {
   return (
     <div className="modal">
       <div className="modalcontent">
-        <Link to="https://www.atomicmassgames.com/">
+        <Link to="https://www.atomicmassgames.com/" target="_blank">
           <img className="atomic" src={atomic} alt="AtomicMassGame logo" />
         </Link>
         <h1 className="modalTitle">À Propos du jeu</h1>
-        <Link to="https://www.atomicmassgames.com/gallery-index">
+        <Link
+          to="https://www.atomicmassgames.com/gallery-index"
+          target="_blank"
+        >
           <img className="mcpL" src={mcp} alt="Marvel Crisis Protocol logo" />
         </Link>
       </div>

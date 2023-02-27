@@ -25,19 +25,18 @@
   display: flex;
   justify-content: space-around;
 }
-
-.cmon,
-.asoiafL {
+.atomic,
+.swlL {
   height: 4em;
   position: absolute;
 }
 
-.cmon {
+.atomic {
   top: 10%;
   left: 5%;
 }
 
-.asoiafL {
+.swlL {
   top: 10%;
   right: 5%;
 }
@@ -129,8 +128,8 @@
     }
   }
 
-  .cmon,
-  .asoiafL {
+  .atomic,
+  .swlL {
     height: 3em;
   }
 }
@@ -180,7 +179,7 @@
   .modalTitle {
     margin-top: 1em;
   }
-  .modalFooterAsoiaf {
+  .modalFooterSWL {
     margin-bottom: 1em;
   }
 }

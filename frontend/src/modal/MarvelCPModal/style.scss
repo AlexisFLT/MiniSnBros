@@ -128,10 +128,9 @@
     }
   }
 
-  .modalcontent {
-    & > img {
-      height: 3em;
-    }
+  .atomic,
+  .mcpL {
+    height: 4em;
   }
 }
 
