@@ -7,10 +7,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-import grootRocket2 from "../../assets/figurines/sans fond/groot-rocketMCP2.png";
+import groot from "../../assets/figurines/sans fond/groot.png";
+import velociraptor from "../../assets/figurines/sans fond/velo.png";
 import "./style.scss";
 
-export default function Guardians() {
+export default function VariousMinis() {
   const swiperRef = useRef();
 
   const sliderSettings = {
@@ -21,18 +22,17 @@ export default function Guardians() {
   };
 
   return (
-    <section className="GuardiansPage">
-      <h2 className="affTitleGuard">Gardiens de la Galaxie</h2>
+    <section className="VariousMinisPage">
       <div className="swiperBlock">
         <button
-          className="prevButtonGuard slideButtonGuard"
+          className="prevButtonVarious slideButtonVarious"
           type="button"
           onClick={() => swiperRef.current?.slidePrev()}
         >
-          <MdNavigateBefore className="iconPrevGuard" />
+          <MdNavigateBefore className="iconPrevVarious" />
         </button>
         <Swiper
-          className="swiperGuard"
+          className="swiperVariousMinis"
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           slidesPerView={1}
           breakpoints={sliderSettings}
@@ -49,23 +49,35 @@ export default function Guardians() {
         >
           <SwiperSlide>
             <figure className="pictureBlock">
+              <img className="pictureChar" src={groot} alt="Groot" />
+              <figcaption className="nameCharVarious">
+                Groot
+                <br />
+                <span className="subnameCharTarg">Impression 3D</span>
+              </figcaption>
+            </figure>
+          </SwiperSlide>
+          <SwiperSlide>
+            <figure className="pictureBlock">
               <img
                 className="pictureChar"
-                src={grootRocket2}
-                alt="Groot & Rocket Raccoon"
+                src={velociraptor}
+                alt="Vélociraptor"
               />
-              <figcaption className="nameCharGuard">
-                Groot & Rocket Raccoon
+              <figcaption className="nameCharVarious">
+                Vélociraptor
+                <br />
+                <span className="subnameCharTarg">Impression 3D</span>
               </figcaption>
             </figure>
           </SwiperSlide>
         </Swiper>
         <button
-          className="nextButtonGuard slideButtonGuard"
+          className="nextButtonVarious slideButtonVarious"
           type="button"
           onClick={() => swiperRef.current?.slideNext()}
         >
-          <MdNavigateNext className="iconNextGuard" />
+          <MdNavigateNext className="iconNextVarious" />
         </button>
       </div>
     </section>
