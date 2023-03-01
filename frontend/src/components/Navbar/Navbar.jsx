@@ -38,7 +38,7 @@ export default function Navbar() {
                   </Link>
                   <Link to="/divers" className="subText">
                     <li>
-                      <p>Figurines Divers</p>
+                      <p>Figurines Diverses</p>
                     </li>
                   </Link>
                 </ul>
