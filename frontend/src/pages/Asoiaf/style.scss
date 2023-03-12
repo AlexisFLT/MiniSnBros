@@ -39,9 +39,9 @@
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
-.neutral,
-.targaryen {
-  height: 65vh;
+.Gallery{
+  position: relative;
+  z-index: 10;
 }
 
 .targaryen {

@@ -1,0 +1,185 @@
+@use "../../App.scss";
+
+.modalImg {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  background-color: App.$colorPrimary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 999;
+  -webkit-animation: slide-in-top 1s ease-out forwards;
+  animation: slide-in-top 1s ease-out forwards;
+}
+
+.imgOriginal:hover{
+    transition: linear 0.3s;
+    transform: scale(1.3);
+}
+
+.imgOriginal{
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+}
+
+// .modalImgcontent {
+//   position: relative;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-around;
+// }
+
+.modalImgTitle {
+  font-family: App.$fontFamily;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  color: App.$colorSecondary;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.modalImgBody {
+  width: 80%;
+
+//   & > p {
+//     margin: 1em;
+//     font-family: App.$fontFamily;
+//     font-size: clamp(0.8rem, 1.5vw, 1rem);
+//     color: App.$colorBG;
+//     gap: 2rem;
+//     line-height: 1.4rem;
+//     letter-spacing: 1px;
+//   }
+}
+
+// .resumeBlock {
+//   text-indent: calc(App.$fontSize * 2.5);
+// }
+
+#buttonClose {
+  border: none;
+  background-color: transparent;
+  font-size: calc(App.$fontSize / 1.5);
+  color: App.$colorFourth;
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+  .modalImg {
+    position: fixed;
+    height: unset;
+    width: unset;
+  }
+
+  .modalImgBody {
+    width: unset;
+
+    // & > p {
+    //   font-family: App.$fontFamily;
+    //   line-height: 1rem;
+    //   letter-spacing: 1px;
+    // }
+  }
+
+//   .modalImgTitle {
+//     font-family: App.$fontFamily;
+//     font-size: clamp(1.5rem, 2.5vw, 2rem);
+//     color: App.$colorSecondary;
+//   }
+
+  .modalImgBody {
+    width: unset;
+
+    // & > p {
+    //   font-size: clamp(0.8rem, 1.5vw, 1rem);
+    // }
+  }
+
+}
+
+// @media only screen and (min-device-width: 320px) and (max-device-width: 767px) and (orientation: landscape) {
+
+// }
+
+//PAD
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
+  .modalImg {
+    height: unset;
+    width: unset;
+    justify-content: center;
+  }
+
+  .modalImgBody {
+    width: unset;
+    margin: 2%;
+
+    // & > p {
+    //   line-height: 1.1rem;
+    //   letter-spacing: 1.2px;
+    //   margin-top: 2%;
+    // }
+  }
+
+//   .modalImgTitle {
+//     font-size: clamp(1.5rem, 2.5vw, 2rem);
+//   }
+
+  .modalImgcontent {
+    & > img {
+      height: 3em;
+    }
+  }
+}
+
+//Medium screen
+
+@media only screen and (min-width: 1250px) and (max-width: 1440px) {
+  .modalImg {
+    height: fit-content;
+    width: 80%;
+  }
+//   .modalImgTitle {
+//     margin-top: 1em;
+//   }
+  .modalImgFooterAsoiaf {
+    margin-bottom: 1em;
+  }
+}
+
+//large screen
+
+// @media only screen and (min-width: 1250px) {
+
+// }

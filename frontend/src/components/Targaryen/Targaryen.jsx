@@ -2,9 +2,10 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
 /* eslint-disable import/no-unresolved */
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
+import ImgModal from "../../modal/ImgModal/ImgModal";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import drogon from "../../assets/figurines/sans fond/drogon.png";
@@ -26,7 +27,9 @@ import screamers from "../../assets/figurines/sans fond/screamer.png";
 import "./style.scss";
 
 export default function Targaryen() {
+  const [show, setShow] = useState(false);
   const swiperRef = useRef();
+  // const originalTarg = useRef();
 
   const sliderSettings = {
     440: {
@@ -35,9 +38,39 @@ export default function Targaryen() {
     },
   };
 
+  // const handleOriginalImg = (event) => {
+  //   const img = event.target.querySelector(".pictureCharHidden");
+
+  //   if (event.type === "mouseover" || event.type === "focus") {
+  //     img.classList.remove("pictureCharHidden");
+  //     img.classList.add("pictureCharVisible");
+  //   } else if (event.type === "mouseout" || event.type === "blur") {
+  //     img.classList.remove("pictureCharVisible");
+  //     img.classList.add("pictureCharHidden");
+  //   }
+  // };
+
+  // const handleOriginalImg = () => {
+  //   originalTarg.current.classList.remove("pictureCharHidden");
+  //   originalTarg.current.classList.add("pictureCharVisible");
+  // };
+  // const handleHideOriginalImg = () => {
+  //   originalTarg.current.classList.remove("pictureCharVisible");
+  //   originalTarg.current.classList.add("pictureCharHidden");
+  // };
+
   return (
     <section className="targaryenPage">
       <h2 className="factionTitleTarg">House Targaryen</h2>
+      {show && (
+        <ImgModal
+          imgSrc={drogon}
+          imgName="drogon"
+          className="imgModal"
+          onClose={() => setShow(false)}
+          show={show}
+        />
+      )}
       <div className="swiperBlock">
         <button
           className="prevButtonTarg slideButtonTarg"
@@ -63,26 +96,33 @@ export default function Targaryen() {
           onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
-            <figure className="pictureBlock">
-              <img className="pictureChar" src={drogon} alt="Drogon" />
+            <figure className="pictureBlockTarg">
+              <button
+                type="button"
+                className="imgButton"
+                onClick={() => setShow(true)}
+              >
+                <img className="pictureCharTarg" src={drogon} alt="Drogon" />
+              </button>
               <figcaption className="nameCharTarg">Drogon</figcaption>
             </figure>
           </SwiperSlide>
+
           <SwiperSlide>
-            <figure className="pictureBlock">
-              <img className="pictureChar" src={raeghal} alt="Raeghal" />
+            <figure className="pictureBlockTarg">
+              <img className="pictureCharTarg" src={raeghal} alt="Raeghal" />
               <figcaption className="nameCharTarg">Raeghal</figcaption>
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
-              <img className="pictureChar" src={viserion} alt="Viserion" />
+            <figure className="pictureBlockTarg">
+              <img className="pictureCharTarg" src={viserion} alt="Viserion" />
               <figcaption className="nameCharTarg">Viserion</figcaption>
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
-              <img className="pictureChar" src={greyworm} alt="Grey Worm" />
+            <figure className="pictureBlockTarg">
+              <img className="pictureCharTarg" src={greyworm} alt="Grey Worm" />
               <figcaption className="nameCharTarg">
                 Grey Worm <br />
                 <span className="subnameCharTarg">UNSULLIED COMMANDER</span>
@@ -90,8 +130,8 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
-              <img className="pictureChar" src={belwas} alt="Belwas" />
+            <figure className="pictureBlockTarg">
+              <img className="pictureCharTarg" src={belwas} alt="Belwas" />
               <figcaption className="nameCharTarg">
                 Belwas <br />{" "}
                 <span className="subnameCharTarg">THE STRONG</span>
@@ -99,8 +139,12 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
-              <img className="pictureChar" src={selmy} alt="Barristan Selmy" />
+            <figure className="pictureBlockTarg">
+              <img
+                className="pictureCharTarg"
+                src={selmy}
+                alt="Barristan Selmy"
+              />
               <figcaption className="nameCharTarg">
                 Barristan Selmy <br />
                 <span className="subnameCharTarg">THE BOLD</span>
@@ -108,8 +152,12 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
-              <img className="pictureChar" src={xaro} alt="Xaro Xhoan Daxos" />
+            <figure className="pictureBlockTarg">
+              <img
+                className="pictureCharTarg"
+                src={xaro}
+                alt="Xaro Xhoan Daxos"
+              />
               <figcaption className="nameCharTarg">
                 Xaro Xhoan Daxos <br />
                 <span className="subnameCharTarg xaro">
@@ -119,9 +167,9 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
+            <figure className="pictureBlockTarg">
               <img
-                className="pictureChar"
+                className="pictureCharTarg"
                 src={illyrio}
                 alt="Illyrio Mopatis"
               />
@@ -132,8 +180,8 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
-              <img className="pictureChar" src={jorah} alt="Jorah" />
+            <figure className="pictureBlockTarg">
+              <img className="pictureCharTarg" src={jorah} alt="Jorah" />
               <figcaption className="nameCharTarg">
                 Jorah Mormont <br />
                 <span className="subnameCharTarg">THE WANDERING KNIGHT</span>
@@ -141,9 +189,9 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
+            <figure className="pictureBlockTarg">
               <img
-                className="pictureChar tall"
+                className="pictureCharTarg tall"
                 src={swordmasters}
                 alt="Unsullied Swordmasters"
               />
@@ -153,9 +201,9 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
+            <figure className="pictureBlockTarg">
               <img
-                className="pictureChar tall"
+                className="pictureCharTarg tall"
                 src={pikemen}
                 alt="Unsullied Pikemen"
               />
@@ -165,9 +213,9 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
+            <figure className="pictureBlockTarg">
               <img
-                className="pictureChar tall"
+                className="pictureCharTarg tall"
                 src={mercenaries}
                 alt="Stormcrow Mercenaries"
               />
@@ -177,9 +225,9 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
+            <figure className="pictureBlockTarg">
               <img
-                className="pictureChar tall"
+                className="pictureCharTarg tall"
                 src={archers}
                 alt="Stormcrow Archers"
               />
@@ -189,9 +237,9 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
+            <figure className="pictureBlockTarg">
               <img
-                className="pictureChar tall"
+                className="pictureCharTarg tall"
                 src={hrakkars}
                 alt="Dothraki Hrakkars"
               />
@@ -201,9 +249,9 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
+            <figure className="pictureBlockTarg">
               <img
-                className="pictureChar tall"
+                className="pictureCharTarg tall"
                 src={bloodriders}
                 alt="Drogos' Bloodriders"
               />
@@ -213,9 +261,9 @@ export default function Targaryen() {
             </figure>
           </SwiperSlide>
           <SwiperSlide>
-            <figure className="pictureBlock">
+            <figure className="pictureBlockTarg">
               <img
-                className="pictureChar tall"
+                className="pictureCharTarg tall"
                 src={screamers}
                 alt="Dothraki Screamers"
               />

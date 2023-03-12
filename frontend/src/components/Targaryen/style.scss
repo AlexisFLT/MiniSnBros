@@ -10,18 +10,35 @@
   font-family: App.$fontFamily;
 }
 
-.pictureBlock {
+.imgButton{
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.pictureBlockTarg {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 5%;
 }
 
-.pictureChar {
+.pictureCharTarg {
   height: App.$pictureSize;
   -webkit-filter: drop-shadow(5px 5px 5px black);
   filter: drop-shadow(10px 5px 20px black);
 }
+
+.pictureCharTarg{
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+// .pictureCharTarg:hover{
+//   transform: scale(2);
+//   z-index: 999;
+// }
 
 .nameCharTarg {
   font-size: App.$fontSize;
@@ -101,7 +118,7 @@
   .nameCharTarg {
     font-size: calc(App.$fontSize / 1.5);
   }
-  .pictureChar {
+  .pictureCharTarg {
     height: 20vh;
     padding-top: 10%;
     -webkit-filter: unset;
@@ -113,7 +130,7 @@
   .xaro {
     font-size: calc(App.$fontSize / 3);
   }
-  .pictureBlock {
+  .pictureBlockTarg {
     padding-top: 5%;
     margin-top: unset;
   }
@@ -145,12 +162,12 @@
     height: 0.5em;
     width: 0.5em;
   }
-  .pictureChar {
+  .pictureCharTarg {
     height: 45vh;
     -webkit-filter: unset;
     filter: unset;
   }
-  .pictureBlock {
+  .pictureBlockTarg {
     padding-top: 5%;
     margin-top: unset;
   }
