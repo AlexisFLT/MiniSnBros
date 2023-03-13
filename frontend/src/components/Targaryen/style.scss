@@ -10,7 +10,7 @@
   font-family: App.$fontFamily;
 }
 
-.imgButton{
+.imgButton {
   border: none;
   background: transparent;
   cursor: pointer;
@@ -30,7 +30,7 @@
   filter: drop-shadow(10px 5px 20px black);
 }
 
-.pictureCharTarg{
+.pictureCharTarg {
   transform-origin: center;
   transition: transform 0.3s ease-in-out;
 }
