@@ -14,7 +14,7 @@ import "./style.scss";
 
 export default function Neutral() {
   const swiperRef = useRef();
-  const { images } = useContext(ImgContext);
+  const { asoiaf } = useContext(ImgContext);
 
   const sliderSettings = {
     440: {
@@ -50,7 +50,7 @@ export default function Neutral() {
           // eslint-disable-next-line no-restricted-syntax
           onSlideChange={() => console.log("slide change")}
         >
-          {images
+          {asoiaf
             .filter((elt) => elt.id > 17)
             .map((image) => (
               <SwiperSlide key={image.id}>
