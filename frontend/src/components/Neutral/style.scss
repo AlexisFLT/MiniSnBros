@@ -16,8 +16,12 @@
   align-items: center;
   flex-direction: column;
   margin-top: 5%;
-  // height: 45vh;
-  // overflow: hidden
+}
+
+.pictureCharNeutr {
+  height: App.$pictureSize;
+  -webkit-filter: drop-shadow(5px 5px 5px black);
+  filter: drop-shadow(10px 5px 20px black);
 }
 
 .nameCharNeutr {
@@ -36,6 +40,7 @@
   --swiper-theme-color: rgb(83, 66, 51);
   height: 1em;
   width: 100%;
+  margin-bottom: 5%;
 }
 
 .swiper-pagination-bullet {

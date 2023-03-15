@@ -23,6 +23,16 @@ import hrakkars from "../../assets/figurines/sans fond/hrakkars.png";
 import bloodriders from "../../assets/figurines/sans fond/bloodriders.png";
 import screamers from "../../assets/figurines/sans fond/screamer.png";
 
+import baelish from "../../assets/figurines/sans fond/baelish.png";
+import tycho from "../../assets/figurines/sans fond/tycho.png";
+import varys from "../../assets/figurines/sans fond/varys.png";
+import blackguards from "../../assets/figurines/sans fond/BG.png";
+import flayed from "../../assets/figurines/sans fond/FM.png";
+import flayed2 from "../../assets/figurines/sans fond/FM2.png";
+import flayedFL from "../../assets/figurines/sans fond/FMflank.png";
+import hedgeK from "../../assets/figurines/sans fond/HK2.png";
+import hedgeK2 from "../../assets/figurines/sans fond/HK3.png";
+import hedgeK3 from "../../assets/figurines/sans fond/HK4.png";
 import "./style.scss";
 
 export default function Asoiaf() {
@@ -114,6 +124,63 @@ export default function Asoiaf() {
       src: `${screamers}`,
       name: "Dothraki Screamers",
     },
+    {
+      id: 18,
+      src: `${tycho}`,
+      name: "Tycho Nestoris",
+      subname: "IRON BANKER",
+    },
+    {
+      id: 19,
+      src: `${baelish}`,
+      name: "Petyr Baelish",
+      subname: "LITTLEFINGER",
+    },
+    {
+      id: 20,
+      src: `${varys}`,
+      name: "Lord Varys",
+      subname: "THE SPIDER",
+    },
+    {
+      id: 21,
+      src: `${blackguards}`,
+      name: "House Bolton Blackguards",
+    },
+    {
+      id: 22,
+      src: `${flayed}`,
+      name: "House Bolton Flayed Men",
+    },
+    {
+      id: 23,
+      src: `${flayed2}`,
+      name: "House Bolton Flayed Men ",
+      subname: "(zoom)",
+    },
+    {
+      id: 24,
+      src: `${flayedFL}`,
+      name: "House Bolton Flayed Men ",
+      subname: "(Flank)",
+    },
+    {
+      id: 25,
+      src: `${hedgeK}`,
+      name: "Hedge Knights",
+    },
+    {
+      id: 26,
+      src: `${hedgeK2}`,
+      name: "Hedge Knights",
+      subname: "(Flank)",
+    },
+    {
+      id: 26,
+      src: `${hedgeK3}`,
+      name: "Hedge Knights",
+      subname: "(Flank & Zoom)",
+    },
   ]);
 
   return (
@@ -141,7 +208,9 @@ export default function Asoiaf() {
           </ImgContext.Provider>
         </div>
         <div className="neutral">
-          <Neutral />
+          <ImgContext.Provider value={{ images }}>
+            <Neutral />
+          </ImgContext.Provider>
         </div>
       </section>
     </section>
