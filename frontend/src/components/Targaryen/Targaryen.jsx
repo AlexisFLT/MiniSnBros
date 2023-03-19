@@ -42,7 +42,7 @@ export default function Targaryen() {
       <ImgContext.Provider value={{ asoiaf }}>
         {show && (
           <ImgModal
-            imgSrc={selectedImage.src}
+            asoiaf={selectedImage}
             // imgName="drogon"
             className="imgModal"
             onClose={() => setShow(false)}
@@ -50,7 +50,7 @@ export default function Targaryen() {
           />
         )}
       </ImgContext.Provider>
-      <div className="swiperBlock">
+      <div className="swiperBlockTarg">
         <button
           className="prevButtonTarg slideButtonTarg"
           type="button"
@@ -74,28 +74,30 @@ export default function Targaryen() {
           // eslint-disable-next-line no-restricted-syntax
           onSlideChange={() => console.log("slide change")}
         >
-          {asoiaf.map((image) => (
-            <SwiperSlide key={image.id}>
-              <button
-                type="button"
-                className="buttonModal"
-                onClick={() => handleModalOpen(asoiaf)}
-              >
-                <figure className="pictureBlockTarg">
-                  <img
-                    className="pictureCharTarg"
-                    src={image.src}
-                    alt={image.name}
-                  />
-                  <figcaption className="nameCharTarg">
-                    {image.name}
-                    <br />
-                    <span className="subnameCharTarg">{image.subname}</span>
-                  </figcaption>
-                </figure>
-              </button>
-            </SwiperSlide>
-          ))}
+          {asoiaf
+            .filter((elt) => elt.id <= 17)
+            .map((image) => (
+              <SwiperSlide key={image.id}>
+                <button
+                  type="button"
+                  className="buttonModalTarg"
+                  onClick={() => handleModalOpen(image)}
+                >
+                  <figure className="pictureBlockTarg">
+                    <img
+                      className="pictureCharTarg"
+                      src={image.src}
+                      alt={image.name}
+                    />
+                    <figcaption className="nameCharTarg">
+                      {image.name}
+                      <br />
+                      <span className="subnameCharTarg">{image.subname}</span>
+                    </figcaption>
+                  </figure>
+                </button>
+              </SwiperSlide>
+            ))}
         </Swiper>
         <button
           className="nextButtonTarg slideButtonTarg"

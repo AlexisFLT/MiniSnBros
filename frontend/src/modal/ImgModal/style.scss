@@ -2,8 +2,8 @@
 
 .modalImg {
   position: absolute;
-  height: 100vh;
-  width: 100%;
+  width: 90%;
+  height: fit-content;
   left: 0;
   top: 0;
   right: 0;
@@ -18,16 +18,37 @@
   -webkit-animation: slide-in-top 1s ease-out forwards;
   animation: slide-in-top 1s ease-out forwards;
 }
-
 .imgOriginal:hover {
   transition: linear 0.3s;
   transform: scale(1.3);
 }
 
+.imgRecto:hover,
+.imgVerso:hover {
+  transition: linear 0.3s;
+  transform: scale(1.4);
+}
+
 .imgOriginal {
-  display: block;
-  margin: auto;
-  margin-top: 10%;
+  align-self: center;
+}
+
+.contentImages {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.cardsAsoiaf {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.imgRecto,
+.imgVerso {
+  height: 15em;
+  border-radius: 0.8em;
 }
 
 // .modalImgcontent {
@@ -40,13 +61,14 @@
 .modalImgTitle {
   font-family: App.$fontFamily;
   font-size: clamp(1rem, 2.5vw, 2rem);
-  color: App.$colorSecondary;
+  color: App.$colorTarg;
   text-align: center;
   margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 .modalImgBody {
-  width: 80%;
+  width: 90%;
 
   //   & > p {
   //     margin: 1em;
@@ -64,10 +86,17 @@
 // }
 
 #buttonClose {
+  position: absolute;
+  top: 2%;
+  right: 2%;
   border: none;
   background-color: transparent;
-  font-size: calc(App.$fontSize / 1.5);
+  font-size: calc(App.$fontSize / 1.1);
   color: App.$colorFourth;
+}
+
+#buttonClose:hover {
+  color: App.$colorTarg;
 }
 
 @-webkit-keyframes slide-in-top {
@@ -120,10 +149,6 @@
 
   .modalImgBody {
     width: unset;
-
-    // & > p {
-    //   font-size: clamp(0.8rem, 1.5vw, 1rem);
-    // }
   }
 }
 
@@ -133,49 +158,33 @@
 
 //PAD
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
-  .modalImg {
-    height: unset;
-    width: unset;
-    justify-content: center;
-  }
+// @media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
+//   .modalImg {
+//     height: unset;
+//     width: unset;
+//     justify-content: center;
+//   }
 
-  .modalImgBody {
-    width: unset;
-    margin: 2%;
-
-    // & > p {
-    //   line-height: 1.1rem;
-    //   letter-spacing: 1.2px;
-    //   margin-top: 2%;
-    // }
-  }
-
-  //   .modalImgTitle {
-  //     font-size: clamp(1.5rem, 2.5vw, 2rem);
-  //   }
-
-  .modalImgcontent {
-    & > img {
-      height: 3em;
-    }
-  }
-}
+//   .modalImgBody {
+//     width: unset;
+//     margin: 2%;
+//   }
+// }
 
 //Medium screen
 
-@media only screen and (min-width: 1250px) and (max-width: 1440px) {
-  .modalImg {
-    height: fit-content;
-    width: 80%;
-  }
-  //   .modalImgTitle {
-  //     margin-top: 1em;
-  //   }
-  .modalImgFooterAsoiaf {
-    margin-bottom: 1em;
-  }
-}
+// @media only screen and (min-width: 1250px) and (max-width: 1440px) {
+//   .modalImg {
+//     height: fit-content;
+//     width: 90%;
+//   }
+//   //   .modalImgTitle {
+//   //     margin-top: 1em;
+//   //   }
+//   .modalImgFooterAsoiaf {
+//     margin-bottom: 1em;
+//   }
+// }
 
 //large screen
 

@@ -26,7 +26,7 @@ export default function Neutral() {
   return (
     <section className="NeutralPage">
       <h2 className="factionTitleNeutr">Neutral</h2>
-      <div className="swiperBlock">
+      <div className="swiperBlockNeutr">
         <button
           className="prevButtonNeutr slideButtonNeutr"
           type="button"

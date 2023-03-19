@@ -13,7 +13,6 @@
 .imgButton {
   border: none;
   background: transparent;
-  cursor: pointer;
 }
 
 .pictureBlockTarg {
@@ -22,6 +21,7 @@
   align-items: center;
   flex-direction: column;
   margin-top: 5%;
+  cursor: pointer;
 }
 
 .pictureCharTarg {
@@ -43,7 +43,7 @@
 .nameCharTarg {
   font-size: App.$fontSize;
   font-family: App.$fontFamily;
-  padding-top: 0.5em;
+  margin-top: 1em;
   text-align: center;
   vertical-align: center;
   color: App.$colorTarg;
@@ -55,21 +55,15 @@
 
 .swiper-pagination {
   position: relative;
-  margin-top: 2%;
 }
 
 .swiperTarg > .swiper-pagination-bullets {
   --swiper-theme-color: rgb(107, 6, 6);
-  height: 1em;
   width: 100%;
+  margin: unset;
 }
 
-.swiper-pagination-bullet {
-  height: 0.8em;
-  width: 0.8em;
-}
-
-.swiperBlock {
+.swiperBlockTarg {
   display: flex;
   align-items: center;
 }
@@ -91,6 +85,13 @@
 
 .prevButtonTarg {
   margin-left: 20%;
+}
+
+.buttonModalTarg {
+  border: none;
+  background-color: transparent;
+  display: block;
+  margin: 2%auto;
 }
 
 //SMARTPHONE

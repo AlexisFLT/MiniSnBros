@@ -37,8 +37,38 @@ import hedgeK from "./assets/figurines/sans fond/HK2.png";
 import hedgeK2 from "./assets/figurines/sans fond/HK3.png";
 import hedgeK3 from "./assets/figurines/sans fond/HK4.png";
 
-import drogonRecto from "./assets/CartesTDF/Drogon/drogonRecto.jpg";
-import drogonVerso from "./assets/CartesTDF/Drogon/drogonVerso.jpg";
+import drogonRecto from "./assets/CartesTDF/drogonRecto.jpg";
+import drogonVerso from "./assets/CartesTDF/drogonVerso.jpg";
+import raeghalRecto from "./assets/CartesTDF/rhaegalRecto.jpg";
+import raeghalVerso from "./assets/CartesTDF/rhaegalVerso.jpg";
+import viserionRecto from "./assets/CartesTDF/viserionRecto.jpg";
+import viserionVerso from "./assets/CartesTDF/viserionVerso.jpg";
+import archersRecto from "./assets/CartesTDF/archersRecto.jpg";
+import archersVerso from "./assets/CartesTDF/archersVerso.jpg";
+import mercenariesRecto from "./assets/CartesTDF/mercenariesRecto.jpg";
+import mercenariesVerso from "./assets/CartesTDF/mercenariesVerso.jpg";
+import bloodRecto from "./assets/CartesTDF/bloodRecto.jpg";
+import bloodVerso from "./assets/CartesTDF/bloodVerso.jpg";
+import swordmRecto from "./assets/CartesTDF/swordRecto.jpg";
+import swordmVerso from "./assets/CartesTDF/swordVerso.jpg";
+import pikemenRecto from "./assets/CartesTDF/pikemenRecto.jpg";
+import pikemenVerso from "./assets/CartesTDF/pikemenVerso.jpg";
+import screamerRecto from "./assets/CartesTDF/screamerRecto.jpg";
+import screamerVerso from "./assets/CartesTDF/screamerVerso.jpg";
+import hrakRecto from "./assets/CartesTDF/hrakRecto.jpg";
+import hrakVerso from "./assets/CartesTDF/hrakVerso.jpg";
+import belwasRecto from "./assets/CartesTDF/belwasRecto.jpg";
+import belwasVerso from "./assets/CartesTDF/belwasVerso.jpg";
+import selmyRecto from "./assets/CartesTDF/selmyRecto.jpg";
+import selmyVerso from "./assets/CartesTDF/selmyVerso.jpg";
+import greywRecto from "./assets/CartesTDF/greywRecto.jpg";
+import greywVerso from "./assets/CartesTDF/greywVerso.jpg";
+import jorahRecto from "./assets/CartesTDF/jorahRecto.jpg";
+import jorahVerso from "./assets/CartesTDF/jorahVerso.jpg";
+import xaroRecto from "./assets/CartesTDF/xaroRecto.jpg";
+import xaroVerso from "./assets/CartesTDF/xaroVerso.jpg";
+import illyrioRecto from "./assets/CartesTDF/illyrioRecto.jpg";
+import illyrioVerso from "./assets/CartesTDF/illyrioVerso.jpg";
 
 import "./App.scss";
 
@@ -55,82 +85,112 @@ function App() {
       id: 2,
       src: `${raeghal}`,
       name: "Raeghal",
+      recto: `${raeghalRecto}`,
+      verso: `${raeghalVerso}`,
     },
     {
       id: 3,
       src: `${viserion}`,
       name: "Viserion",
+      recto: `${viserionRecto}`,
+      verso: `${viserionVerso}`,
     },
     {
       id: 4,
       src: `${greyworm}`,
       name: "Grey Worm",
       subname: "UNSULLIED COMMANDER",
+      recto: `${greywRecto}`,
+      verso: `${greywVerso}`,
     },
     {
       id: 5,
       src: `${belwas}`,
       name: "Belwas",
       subname: "THE STRONG",
+      recto: `${belwasRecto}`,
+      verso: `${belwasVerso}`,
     },
     {
       id: 6,
       src: `${selmy}`,
       name: "Barristan Selmy",
       subname: "THE BOLD",
+      recto: `${selmyRecto}`,
+      verso: `${selmyVerso}`,
     },
     {
       id: 7,
       src: `${xaro}`,
       name: "Xaro Xhoan Daxos",
       subname: "MERCHANT PRINCE OF QARTH",
+      recto: `${xaroRecto}`,
+      verso: `${xaroVerso}`,
     },
     {
       id: 8,
       src: `${illyrio}`,
       name: "Illyrio Mopatis",
       subname: "MAGISTER OF PENTOS",
+      recto: `${illyrioRecto}`,
+      verso: `${illyrioVerso}`,
     },
     {
       id: 10,
       src: `${jorah}`,
       name: "Jorah Mormont",
       subname: "THE WANDERING KNIGHT",
+      recto: `${jorahRecto}`,
+      verso: `${jorahVerso}`,
     },
     {
       id: 11,
       src: `${swordmasters}`,
       name: "Unsullied Swordmasters",
+      recto: `${swordmRecto}`,
+      verso: `${swordmVerso}`,
     },
     {
       id: 12,
       src: `${pikemen}`,
       name: "Unsullied Pikemen",
+      recto: `${pikemenRecto}`,
+      verso: `${pikemenVerso}`,
     },
     {
       id: 13,
       src: `${mercenaries}`,
       name: "Stormcrow Mercenaries",
+      recto: `${mercenariesRecto}`,
+      verso: `${mercenariesVerso}`,
     },
     {
       id: 14,
       src: `${archers}`,
       name: "Stormcrow Archers",
+      recto: `${archersRecto}`,
+      verso: `${archersVerso}`,
     },
     {
       id: 15,
       src: `${hrakkars}`,
       name: "Dothraki Hrakkars",
+      recto: `${hrakRecto}`,
+      verso: `${hrakVerso}`,
     },
     {
       id: 16,
       src: `${bloodriders}`,
       name: "Drogos' Bloodriders",
+      recto: `${bloodRecto}`,
+      verso: `${bloodVerso}`,
     },
     {
       id: 17,
       src: `${screamers}`,
       name: "Dothraki Screamers",
+      recto: `${screamerRecto}`,
+      verso: `${screamerVerso}`,
     },
     {
       id: 18,
