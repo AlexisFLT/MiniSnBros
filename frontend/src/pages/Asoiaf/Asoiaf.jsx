@@ -1,12 +1,16 @@
+/* eslint-disable react/jsx-no-constructed-context-values */
+import { useContext, useState } from "react";
+// import { ImImages } from "react-icons/im";
 import Navbar from "@components/Navbar/Navbar";
 import Neutral from "@components/Neutral/Neutral";
 import Targaryen from "@components/Targaryen/Targaryen";
-import { useState } from "react";
+import ImgContext from "../../services/Context/ImgContext";
 import AsoiafModal from "../../modal/AsoiafModal/AsoiafModal";
 import "./style.scss";
 
 export default function Asoiaf() {
   const [show, setShow] = useState(false);
+  const { asoiaf } = useContext(ImgContext);
 
   return (
     <section className="asoiafPage">
@@ -28,10 +32,14 @@ export default function Asoiaf() {
       </button>
       <section className="Gallery">
         <div className="targaryen">
-          <Targaryen />
+          <ImgContext.Provider value={{ asoiaf }}>
+            <Targaryen />
+          </ImgContext.Provider>
         </div>
         <div className="neutral">
-          <Neutral />
+          <ImgContext.Provider value={{ asoiaf }}>
+            <Neutral />
+          </ImgContext.Provider>
         </div>
       </section>
     </section>

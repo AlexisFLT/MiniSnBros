@@ -1,21 +1,46 @@
 /* eslint-disable react/destructuring-assignment */
 import { ImCross } from "react-icons/im";
+// import { useContext } from "react";
 import PropTypes from "prop-types";
-import drogoRecto from "../../assets/CartesTDF/Drogon/drogonRecto.jpg";
+// import ImgContext from "@services/Context/ImgContext";
 import "./style.scss";
+import { useRef } from "react";
 
 export default function ImgModal(props) {
-  const { imgName, imgSrc } = props;
+  const characterRef = useRef(false);
+  const { asoiaf } = props;
+  // const { asoiaf } = useContext(ImgContext);
   if (!props.show) {
     return null;
   }
 
+  const handleCharCards = () => {
+    if (asoiaf.character === true) {
+      characterRef.current.classList.add("cardAttach");
+    }
+  };
+
   return (
     <div className="modalImg">
-      <div className="modalImgBody">
-        <h1 className="modalImgTitle">Drogon</h1>
-        <img src={imgSrc} alt={imgName} className="imgOriginal" />
-        <img src={drogoRecto} alt="Drogon recto" className="imgRecto" />
+      <div className="modalImgBody" key={asoiaf.id}>
+        <h1 className="modalImgTitle">{asoiaf.name}</h1>
+        <div className="contentImages">
+          <img src={asoiaf.src} alt={asoiaf.name} className="imgOriginal" />
+          <div className="cardsAsoiaf" ref={characterRef}>
+            <img
+              src={asoiaf.recto}
+              alt="Recto"
+              className="imgRecto cardAttac"
+              onLoad={handleCharCards}
+            />
+            <img
+              src={asoiaf.verso}
+              alt="Verso"
+              className="imgVerso cardAtach"
+              onLoad={handleCharCards}
+            />
+          </div>
+        </div>
       </div>
       <div className="modalImgFooterAsoiaf">
         <button type="button" onClick={props.onClose} id="buttonClose">
@@ -29,6 +54,7 @@ export default function ImgModal(props) {
 ImgModal.propTypes = {
   show: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  imgSrc: PropTypes.string.isRequired,
-  imgName: PropTypes.string.isRequired,
+  // imgSrc: PropTypes.string.isRequired,
+  // imgName: PropTypes.string.isRequired,
+  asoiaf: PropTypes.string.isRequired,
 };
