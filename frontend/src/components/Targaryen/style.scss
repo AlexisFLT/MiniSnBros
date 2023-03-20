@@ -35,11 +35,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-// .pictureCharTarg:hover{
-//   transform: scale(2);
-//   z-index: 999;
-// }
-
 .nameCharTarg {
   font-size: App.$fontSize;
   font-family: App.$fontFamily;
@@ -120,7 +115,7 @@
     font-size: calc(App.$fontSize / 1.5);
   }
   .pictureCharTarg {
-    height: 20vh;
+    height: 30vh;
     padding-top: 10%;
     -webkit-filter: unset;
     filter: unset;
@@ -134,6 +129,10 @@
   .pictureBlockTarg {
     padding-top: 5%;
     margin-top: unset;
+  }
+
+  .buttonModalTarg {
+    margin: -5% auto;
   }
 }
 

@@ -102,6 +102,7 @@ function App() {
       subname: "UNSULLIED COMMANDER",
       recto: `${greywRecto}`,
       verso: `${greywVerso}`,
+      character: true,
     },
     {
       id: 5,
@@ -110,6 +111,7 @@ function App() {
       subname: "THE STRONG",
       recto: `${belwasRecto}`,
       verso: `${belwasVerso}`,
+      character: true,
     },
     {
       id: 6,
@@ -118,6 +120,7 @@ function App() {
       subname: "THE BOLD",
       recto: `${selmyRecto}`,
       verso: `${selmyVerso}`,
+      character: true,
     },
     {
       id: 7,
@@ -126,6 +129,7 @@ function App() {
       subname: "MERCHANT PRINCE OF QARTH",
       recto: `${xaroRecto}`,
       verso: `${xaroVerso}`,
+      character: true,
     },
     {
       id: 8,
@@ -134,6 +138,7 @@ function App() {
       subname: "MAGISTER OF PENTOS",
       recto: `${illyrioRecto}`,
       verso: `${illyrioVerso}`,
+      character: true,
     },
     {
       id: 10,

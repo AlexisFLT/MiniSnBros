@@ -51,12 +51,9 @@
   border-radius: 0.8em;
 }
 
-// .modalImgcontent {
-//   position: relative;
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-around;
-// }
+.cardAttach {
+  flex-direction: row;
+}
 
 .modalImgTitle {
   font-family: App.$fontFamily;
@@ -69,21 +66,7 @@
 
 .modalImgBody {
   width: 90%;
-
-  //   & > p {
-  //     margin: 1em;
-  //     font-family: App.$fontFamily;
-  //     font-size: clamp(0.8rem, 1.5vw, 1rem);
-  //     color: App.$colorBG;
-  //     gap: 2rem;
-  //     line-height: 1.4rem;
-  //     letter-spacing: 1px;
-  //   }
 }
-
-// .resumeBlock {
-//   text-indent: calc(App.$fontSize * 2.5);
-// }
 
 #buttonClose {
   position: absolute;
@@ -126,29 +109,32 @@
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
   .modalImg {
-    position: fixed;
-    height: unset;
+    height: 100vh;
     width: unset;
   }
 
-  .modalImgBody {
-    width: unset;
+  .contentImages {
+    flex-direction: column;
 
-    // & > p {
-    //   font-family: App.$fontFamily;
-    //   line-height: 1rem;
-    //   letter-spacing: 1px;
-    // }
+    & img {
+      height: fit-content;
+    }
+
+    .imgOriginal {
+      height: 20em;
+    }
+
+    & .cardsAsoiaf {
+      gap: 1em;
+    }
   }
 
-  //   .modalImgTitle {
-  //     font-family: App.$fontFamily;
-  //     font-size: clamp(1.5rem, 2.5vw, 2rem);
-  //     color: App.$colorSecondary;
-  //   }
-
-  .modalImgBody {
-    width: unset;
+  .modalImgTitle {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    color: App.$colorTarg;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 2%;
   }
 }
 
@@ -159,31 +145,11 @@
 //PAD
 
 // @media only screen and (min-device-width: 768px) and (max-device-width: 1249px) {
-//   .modalImg {
-//     height: unset;
-//     width: unset;
-//     justify-content: center;
-//   }
-
-//   .modalImgBody {
-//     width: unset;
-//     margin: 2%;
-//   }
 // }
 
 //Medium screen
 
 // @media only screen and (min-width: 1250px) and (max-width: 1440px) {
-//   .modalImg {
-//     height: fit-content;
-//     width: 90%;
-//   }
-//   //   .modalImgTitle {
-//   //     margin-top: 1em;
-//   //   }
-//   .modalImgFooterAsoiaf {
-//     margin-bottom: 1em;
-//   }
 // }
 
 //large screen

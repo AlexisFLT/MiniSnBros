@@ -84,7 +84,7 @@
   .factionTitleNeutr {
     font-size: calc(App.$fontSizeTitle / 2);
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 15%;
     font-family: App.$fontFamily;
   }
   .nextButtonNeutr {
@@ -102,6 +102,11 @@
   }
   .subnameCharNeutr {
     font-size: calc(App.$fontSize / 2);
+  }
+  .pictureCharNeutr {
+    height: 30vh;
+    -webkit-filter: unset;
+    filter: unset;
   }
 }
 
