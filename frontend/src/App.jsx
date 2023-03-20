@@ -249,7 +249,7 @@ function App() {
       subname: "(Flank)",
     },
     {
-      id: 26,
+      id: 27,
       src: `${hedgeK3}`,
       name: "Hedge Knights",
       subname: "(Flank & Zoom)",

@@ -51,9 +51,15 @@
   border-radius: 0.8em;
 }
 
-.cardAttach {
+.cardsChar {
   flex-direction: row;
+
+  & > img{
+    height: 19em;
+
+  }
 }
+
 
 .modalImgTitle {
   font-family: App.$fontFamily;

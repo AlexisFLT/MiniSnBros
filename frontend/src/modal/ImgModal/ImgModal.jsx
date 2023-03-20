@@ -8,6 +8,7 @@ import { useRef } from "react";
 
 export default function ImgModal(props) {
   const characterRef = useRef(false);
+  const sizeCardCharRef = useRef(false);
   const { asoiaf } = props;
   // const { asoiaf } = useContext(ImgContext);
   if (!props.show) {
@@ -16,7 +17,7 @@ export default function ImgModal(props) {
 
   const handleCharCards = () => {
     if (asoiaf.character === true) {
-      characterRef.current.classList.add("cardAttach");
+      characterRef.current.classList.add("cardsChar");
     }
   };
 
@@ -30,13 +31,15 @@ export default function ImgModal(props) {
             <img
               src={asoiaf.recto}
               alt="Recto"
-              className="imgRecto cardAttac"
+              className="imgRecto"
+              ref={sizeCardCharRef}
               onLoad={handleCharCards}
             />
             <img
               src={asoiaf.verso}
               alt="Verso"
-              className="imgVerso cardAtach"
+              className="imgVerso"
+              ref={sizeCardCharRef}
               onLoad={handleCharCards}
             />
           </div>
@@ -54,7 +57,6 @@ export default function ImgModal(props) {
 ImgModal.propTypes = {
   show: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
-  // imgSrc: PropTypes.string.isRequired,
-  // imgName: PropTypes.string.isRequired,
-  asoiaf: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  asoiaf: PropTypes.object.isRequired,
 };
