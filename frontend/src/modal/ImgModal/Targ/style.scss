@@ -1,6 +1,6 @@
-@use "../../App.scss";
+@use "../../../App.scss";
 
-.modalImg {
+.modalImgT {
   position: absolute;
   width: 90%;
   height: fit-content;
@@ -9,6 +9,7 @@
   right: 0;
   bottom: 0;
   margin: 0 auto;
+  margin-bottom: 10%;
   background-color: App.$colorPrimary;
   display: flex;
   flex-direction: column;
@@ -54,12 +55,10 @@
 .cardsChar {
   flex-direction: row;
 
-  & > img{
+  & > img {
     height: 19em;
-
   }
 }
-
 
 .modalImgTitle {
   font-family: App.$fontFamily;
@@ -68,6 +67,10 @@
   text-align: center;
   margin-top: 2%;
   margin-bottom: 5%;
+}
+
+.modalSubname {
+  font-size: calc(App.$fontSize / 1.5);
 }
 
 .modalImgBody {

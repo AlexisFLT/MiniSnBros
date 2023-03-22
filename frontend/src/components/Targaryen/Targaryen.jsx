@@ -7,7 +7,7 @@ import ImgContext from "@services/Context/ImgContext";
 import { useContext, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
-import ImgModal from "../../modal/ImgModal/ImgModal";
+import ImgModal from "../../modal/ImgModal/Targ/ImgModalTarg";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "./style.scss";
@@ -31,11 +31,6 @@ export default function Targaryen() {
     setShow(true);
   };
 
-  // const handleModalClose = () => {
-  //   setSelectedImage(null);
-  //   setShow(false);
-  // };
-
   return (
     <section className="targaryenPage">
       <h2 className="factionTitleTarg">House Targaryen</h2>
@@ -43,7 +38,6 @@ export default function Targaryen() {
         {show && (
           <ImgModal
             asoiaf={selectedImage}
-            // imgName="drogon"
             className="imgModal"
             onClose={() => setShow(false)}
             show={show}

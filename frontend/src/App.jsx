@@ -9,6 +9,8 @@ import SwLegion from "@pages/SwLegion/SwLegion";
 import Various from "@pages/Various/Various";
 import Home from "./pages/Home/Home";
 
+// Minis Import //
+
 import drogon from "./assets/figurines/sans fond/drogon.png";
 import raeghal from "./assets/figurines/sans fond/raeghal.png";
 import viserion from "./assets/figurines/sans fond/viserion.png";
@@ -36,6 +38,8 @@ import flayedFL from "./assets/figurines/sans fond/FMflank.png";
 import hedgeK from "./assets/figurines/sans fond/HK2.png";
 import hedgeK2 from "./assets/figurines/sans fond/HK3.png";
 import hedgeK3 from "./assets/figurines/sans fond/HK4.png";
+
+// Cards Import //
 
 import drogonRecto from "./assets/CartesTDF/Targaryen/drogonRecto.jpg";
 import drogonVerso from "./assets/CartesTDF/Targaryen/drogonVerso.jpg";
@@ -69,6 +73,19 @@ import xaroRecto from "./assets/CartesTDF/Targaryen/xaroRecto.jpg";
 import xaroVerso from "./assets/CartesTDF/Targaryen/xaroVerso.jpg";
 import illyrioRecto from "./assets/CartesTDF/Targaryen/illyrioRecto.jpg";
 import illyrioVerso from "./assets/CartesTDF/Targaryen/illyrioVerso.jpg";
+
+import bgRecto from "./assets/CartesTDF/Neutral/bgRecto.jpg";
+import bgVerso from "./assets/CartesTDF/Neutral/bgVerso.jpg";
+import hkRecto from "./assets/CartesTDF/Neutral/hkRecto.jpg";
+import hkVerso from "./assets/CartesTDF/Neutral/hkVerso.jpg";
+import fmRecto from "./assets/CartesTDF/Neutral/fmRecto.jpg";
+import fmVerso from "./assets/CartesTDF/Neutral/fmVerso.jpg";
+import petyrRecto from "./assets/CartesTDF/Neutral/petyrRecto.jpg";
+import petyrVerso from "./assets/CartesTDF/Neutral/petyrVerso.jpg";
+import tychoRecto from "./assets/CartesTDF/Neutral/tychoRecto.jpg";
+import tychoVerso from "./assets/CartesTDF/Neutral/tychoVerso.jpg";
+import varysRecto from "./assets/CartesTDF/Neutral/varysRecto.jpg";
+import varysVerso from "./assets/CartesTDF/Neutral/varysVerso.jpg";
 
 import "./App.scss";
 
@@ -202,57 +219,80 @@ function App() {
       src: `${tycho}`,
       name: "Tycho Nestoris",
       subname: "IRON BANKER",
+      recto: `${tychoRecto}`,
+      verso: `${tychoVerso}`,
+      character: true,
     },
     {
       id: 19,
       src: `${baelish}`,
       name: "Petyr Baelish",
       subname: "LITTLEFINGER",
+      recto: `${petyrRecto}`,
+      verso: `${petyrVerso}`,
+      character: true,
     },
     {
       id: 20,
       src: `${varys}`,
       name: "Lord Varys",
       subname: "THE SPIDER",
+      recto: `${varysRecto}`,
+      verso: `${varysVerso}`,
+      character: true,
     },
     {
       id: 21,
       src: `${blackguards}`,
       name: "House Bolton Blackguards",
+      recto: `${bgRecto}`,
+      verso: `${bgVerso}`,
     },
     {
       id: 22,
       src: `${flayed}`,
       name: "House Bolton Flayed Men",
+      recto: `${fmRecto}`,
+      verso: `${fmVerso}`,
     },
     {
       id: 23,
       src: `${flayed2}`,
       name: "House Bolton Flayed Men ",
       subname: "(zoom)",
+      recto: `${fmRecto}`,
+      verso: `${fmVerso}`,
     },
     {
       id: 24,
       src: `${flayedFL}`,
       name: "House Bolton Flayed Men ",
       subname: "(Flank)",
+      recto: `${fmRecto}`,
+      verso: `${fmVerso}`,
     },
     {
       id: 25,
       src: `${hedgeK}`,
       name: "Hedge Knights",
+      recto: `${hkRecto}`,
+      verso: `${hkVerso}`,
     },
     {
       id: 26,
       src: `${hedgeK2}`,
       name: "Hedge Knights",
       subname: "(Flank)",
+      recto: `${hkRecto}`,
+      verso: `${hkVerso}`,
     },
     {
       id: 27,
       src: `${hedgeK3}`,
       name: "Hedge Knights",
       subname: "(Flank & Zoom)",
+      recto: `${hkRecto}`,
+      verso: `${hkVerso}`,
     },
   ]);
 
