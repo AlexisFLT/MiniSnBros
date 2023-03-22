@@ -6,11 +6,10 @@ import PropTypes from "prop-types";
 import "./style.scss";
 import { useRef } from "react";
 
-export default function ImgModal(props) {
+export default function ImgModalNeutral(props) {
   const characterRef = useRef(false);
   const sizeCardCharRef = useRef(false);
   const { asoiaf } = props;
-  // const { asoiaf } = useContext(ImgContext);
   if (!props.show) {
     return null;
   }
@@ -22,9 +21,12 @@ export default function ImgModal(props) {
   };
 
   return (
-    <div className="modalImg">
+    <div className="modalImgN">
       <div className="modalImgBody" key={asoiaf.id}>
-        <h1 className="modalImgTitle">{asoiaf.name}</h1>
+        <h1 className="modalImgTitleN">
+          {asoiaf.name} -{" "}
+          <span className="modalSubnameN"> {asoiaf.subname}</span>
+        </h1>
         <div className="contentImages">
           <img src={asoiaf.src} alt={asoiaf.name} className="imgOriginal" />
           <div className="cardsAsoiaf" ref={characterRef}>
@@ -46,7 +48,7 @@ export default function ImgModal(props) {
         </div>
       </div>
       <div className="modalImgFooterAsoiaf">
-        <button type="button" onClick={props.onClose} id="buttonClose">
+        <button type="button" onClick={props.onClose} id="buttonCloseN">
           <ImCross className="closeIcon" />
         </button>
       </div>
@@ -54,7 +56,7 @@ export default function ImgModal(props) {
   );
 }
 
-ImgModal.propTypes = {
+ImgModalNeutral.propTypes = {
   show: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
