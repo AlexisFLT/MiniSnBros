@@ -9,37 +9,37 @@ import SwLegion from "@pages/SwLegion/SwLegion";
 import Various from "@pages/Various/Various";
 import Home from "./pages/Home/Home";
 
-// Minis Import //
+// Minis TDF Import //
 
-import drogon from "./assets/figurines/sans fond/drogon.png";
-import raeghal from "./assets/figurines/sans fond/raeghal.png";
-import viserion from "./assets/figurines/sans fond/viserion.png";
-import greyworm from "./assets/figurines/sans fond/greyworm.png";
-import belwas from "./assets/figurines/sans fond/belwas.png";
-import selmy from "./assets/figurines/sans fond/selmy.png";
-import xaro from "./assets/figurines/sans fond/xaro.png";
-import illyrio from "./assets/figurines/sans fond/illyrio.png";
-import jorah from "./assets/figurines/sans fond/jorah.png";
-import swordmasters from "./assets/figurines/sans fond/swordmaster.png";
-import pikemen from "./assets/figurines/sans fond/pikemen.png";
-import mercenaries from "./assets/figurines/sans fond/mercenaries.png";
-import archers from "./assets/figurines/sans fond/archers.png";
-import hrakkars from "./assets/figurines/sans fond/hrakkars.png";
-import bloodriders from "./assets/figurines/sans fond/bloodriders.png";
-import screamers from "./assets/figurines/sans fond/screamer.png";
+import drogon from "./assets/figurines/sans fond/TDF/drogon.png";
+import raeghal from "./assets/figurines/sans fond/TDF/raeghal.png";
+import viserion from "./assets/figurines/sans fond/TDF/viserion.png";
+import greyworm from "./assets/figurines/sans fond/TDF/greyworm.png";
+import belwas from "./assets/figurines/sans fond/TDF/belwas.png";
+import selmy from "./assets/figurines/sans fond/TDF/selmy.png";
+import xaro from "./assets/figurines/sans fond/TDF/xaro.png";
+import illyrio from "./assets/figurines/sans fond/TDF/illyrio.png";
+import jorah from "./assets/figurines/sans fond/TDF/jorah.png";
+import swordmasters from "./assets/figurines/sans fond/TDF/swordmaster.png";
+import pikemen from "./assets/figurines/sans fond/TDF/pikemen.png";
+import mercenaries from "./assets/figurines/sans fond/TDF/mercenaries.png";
+import archers from "./assets/figurines/sans fond/TDF/archers.png";
+import hrakkars from "./assets/figurines/sans fond/TDF/hrakkars.png";
+import bloodriders from "./assets/figurines/sans fond/TDF/bloodriders.png";
+import screamers from "./assets/figurines/sans fond/TDF/screamer.png";
 
-import baelish from "./assets/figurines/sans fond/baelish.png";
-import tycho from "./assets/figurines/sans fond/tycho.png";
-import varys from "./assets/figurines/sans fond/varys.png";
-import blackguards from "./assets/figurines/sans fond/BG.png";
-import flayed from "./assets/figurines/sans fond/FM.png";
-import flayed2 from "./assets/figurines/sans fond/FM2.png";
-import flayedFL from "./assets/figurines/sans fond/FMflank.png";
-import hedgeK from "./assets/figurines/sans fond/HK2.png";
-import hedgeK2 from "./assets/figurines/sans fond/HK3.png";
-import hedgeK3 from "./assets/figurines/sans fond/HK4.png";
+import baelish from "./assets/figurines/sans fond/TDF/baelish.png";
+import tycho from "./assets/figurines/sans fond/TDF/tycho.png";
+import varys from "./assets/figurines/sans fond/TDF/varys.png";
+import blackguards from "./assets/figurines/sans fond/TDF/BG.png";
+import flayed from "./assets/figurines/sans fond/TDF/FM.png";
+import flayed2 from "./assets/figurines/sans fond/TDF/FM2.png";
+import flayedFL from "./assets/figurines/sans fond/TDF/FMflank.png";
+import hedgeK from "./assets/figurines/sans fond/TDF/HK2.png";
+import hedgeK2 from "./assets/figurines/sans fond/TDF/HK3.png";
+import hedgeK3 from "./assets/figurines/sans fond/TDF/HK4.png";
 
-// Cards Import //
+// Cards TDF Import //
 
 import drogonRecto from "./assets/CartesTDF/Targaryen/drogonRecto.jpg";
 import drogonVerso from "./assets/CartesTDF/Targaryen/drogonVerso.jpg";
@@ -86,6 +86,18 @@ import tychoRecto from "./assets/CartesTDF/Neutral/tychoRecto.jpg";
 import tychoVerso from "./assets/CartesTDF/Neutral/tychoVerso.jpg";
 import varysRecto from "./assets/CartesTDF/Neutral/varysRecto.jpg";
 import varysVerso from "./assets/CartesTDF/Neutral/varysVerso.jpg";
+
+// Minis MCP import //
+
+import groot from "./assets/figurines/sans fond/MCP/groot-rocketMCP.png";
+import rocket from "./assets/figurines/sans fond/MCP/groot-rocketMCP2.png";
+
+// MCP Cards //
+
+import grootH from "./assets/CartesMCP/groot.png";
+import grootI from "./assets/CartesMCP/grootKO.png";
+import rocketH from "./assets/CartesMCP/rocket.png";
+import rocketI from "./assets/CartesMCP/rocketKO.png";
 
 import "./App.scss";
 
@@ -295,6 +307,22 @@ function App() {
       verso: `${hkVerso}`,
     },
   ]);
+  const [mcp] = useState([
+    {
+      id: 1,
+      name: "Groot",
+      src: { groot },
+      healthy: { grootH },
+      injured: { grootI },
+    },
+    {
+      id: 2,
+      name: "Rocket Raccoon",
+      src: { rocket },
+      healthy: { rocketH },
+      injured: { rocketI },
+    },
+  ]);
 
   return (
     <Routes>
@@ -309,7 +337,9 @@ function App() {
         }
       />
       <Route path="/swlegion" element={<SwLegion />} />
-      <Route path="/marvelcp" element={<MarvelCP />} />
+      <ImgContext.Provider value={{ mcp }}>
+        <Route path="/marvelcp" element={<MarvelCP />} />
+      </ImgContext.Provider>
       <Route path="/divers" element={<Various />} />
       {/* <Route path="/battlereport" element={<Battlereport />} /> */}
     </Routes>
