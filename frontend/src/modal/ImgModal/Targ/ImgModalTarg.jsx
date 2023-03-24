@@ -2,7 +2,6 @@
 import { ImCross } from "react-icons/im";
 // import { useContext } from "react";
 import PropTypes from "prop-types";
-// import ImgContext from "@services/Context/ImgContext";
 import "./style.scss";
 import { useRef } from "react";
 
@@ -24,7 +23,8 @@ export default function ImgModalTarg(props) {
     <div className="modalImgT">
       <div className="modalImgBody" key={asoiaf.id}>
         <h1 className="modalImgTitle">
-          {asoiaf.name} -<span className=" "> {asoiaf.subname}</span>
+          {asoiaf.name} -
+          <span className="modalSubname "> {asoiaf.subname}</span>
         </h1>
         <div className="contentImages">
           <img src={asoiaf.src} alt={asoiaf.name} className="imgOriginal" />

@@ -7,8 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-import wookies from "../../assets/figurines/sans fond/wookies+chewi.png";
-import rebels from "../../assets/figurines/sans fond/rebels.png";
+import wookies from "../../assets/figurines/sansFond/SWL/wookies+chewi.png";
+import rebels from "../../assets/figurines/sansFond/SWL/rebels.png";
 import "./style.scss";
 
 export default function Rebels() {

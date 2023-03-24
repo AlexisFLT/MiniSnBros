@@ -19,10 +19,11 @@
   margin-top: 5%;
 }
 
-.pictureChar {
-  height: App.$pictureSize;
+.pictureCharMCP {
+  height: App.$pictureSizeMCP;
   -webkit-filter: drop-shadow(5px 5px 5px black);
   filter: drop-shadow(10px 5px 20px black);
+  cursor: pointer;
 }
 
 .nameCharGuard {
@@ -78,6 +79,13 @@
   margin-left: 20%;
 }
 
+.buttonModalGuard {
+  border: none;
+  background-color: transparent;
+  display: block;
+  margin: 2%auto;
+}
+
 //SMARTPHONE
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
@@ -103,7 +111,7 @@
   .nameCharGuard {
     font-size: calc(App.$fontSize / 1.5);
   }
-  .pictureChar {
+  .pictureCharMCP {
     height: 20vh;
     padding-top: 10%;
     -webkit-filter: unset;
@@ -142,7 +150,7 @@
     height: 0.5em;
     width: 0.5em;
   }
-  .pictureChar {
+  .pictureCharMCP {
     height: 45vh;
     -webkit-filter: unset;
     filter: unset;

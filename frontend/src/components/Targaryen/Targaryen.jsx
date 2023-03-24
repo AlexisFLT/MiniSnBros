@@ -17,7 +17,6 @@ export default function Targaryen() {
   const [selectedImage, setSelectedImage] = useState(null);
   const swiperRef = useRef();
   const { asoiaf } = useContext(ImgContext);
-  // const originalTarg = useRef();
 
   const sliderSettings = {
     440: {
