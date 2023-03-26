@@ -7,8 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-import groot from "../../assets/figurines/sans fond/groot.png";
-import velociraptor from "../../assets/figurines/sans fond/velo.png";
+import groot from "../../assets/figurines/sansFond/groot.png";
+import velociraptor from "../../assets/figurines/sansFond/velo.png";
 import "./style.scss";
 
 export default function VariousMinis() {
