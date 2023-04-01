@@ -19,7 +19,7 @@
   -webkit-animation: slide-in-top 1s ease-out forwards;
   animation: slide-in-top 1s ease-out forwards;
 }
-.imgOriginal:hover {
+.imgOriginalMcp:hover {
   transition: linear 0.3s;
   transform: scale(1.3);
 }
@@ -27,11 +27,16 @@
 .imgRecto:hover,
 .imgVerso:hover {
   transition: linear 0.3s;
-  transform: scale(1.4);
+  transform: scale(1.5);
 }
 
-.imgOriginal {
+.imgOriginalMcp {
   align-self: center;
+}
+
+.imgOriginalFnB {
+  display: flex;
+  gap: 5em;
 }
 
 .contentImages {
@@ -48,14 +53,14 @@
 
 .imgRecto,
 .imgVerso {
-  height: 15em;
+  height: 20em;
   border-radius: 0.8em;
 }
 
 .modalImgTitleG {
   font-family: App.$fontFamily;
   font-size: clamp(1rem, 2.5vw, 2rem);
-  color: App.$colorNeutr;
+  color: App.$colorGuard;
   text-align: center;
   margin-top: 2%;
   margin-bottom: 5%;

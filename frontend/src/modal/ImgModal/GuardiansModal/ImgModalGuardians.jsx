@@ -13,10 +13,13 @@ export default function ImgModalGuardians(props) {
     <div className="modalImgG">
       <div className="modalImgBody" key={mcp.id}>
         <h1 className="modalImgTitleG">
-          {mcp.name} -<span className="modalSubnameG"> {mcp.subname}</span>
+          {mcp.name} <span className="modalSubnameG">- {mcp.subname}</span>
         </h1>
         <div className="contentImages">
-          <img src={mcp.src} alt={mcp.name} className="imgOriginal" />
+          <div className="imgOriginalFnB">
+            <img src={mcp.srcF} alt={mcp.name} className="imgOriginalMcp" />
+            <img src={mcp.srcB} alt={mcp.name} className="imgOriginalMcp" />
+          </div>
           <div className="cardsmcp">
             <img src={mcp.healthy} alt="Healthy" className="imgRecto" />
             <img src={mcp.injured} alt="Injured" className="imgVerso" />

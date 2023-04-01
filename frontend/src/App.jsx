@@ -91,8 +91,9 @@ import varysVerso from "./assets/CartesTDF/Neutral/varysVerso.jpg";
 
 import groot from "./assets/figurines/sansFond/MCP/Groot.png";
 import rocket from "./assets/figurines/sansFond/MCP/rocket1.png";
-import starlord from "./assets/figurines/sansFond/MCP/starlordF.png";
-// import rocket2 from "./assets/figurines/sansFond/MCP/rocket2.png";
+import rocket2 from "./assets/figurines/sansFond/MCP/rocket2.png";
+import starlordF from "./assets/figurines/sansFond/MCP/starlordF.png";
+import starlordB from "./assets/figurines/sansFond/MCP/starlordB.png";
 
 // MCP Cards //
 
@@ -315,24 +316,28 @@ function App() {
     {
       id: 1,
       name: "Groot",
-      src: `${groot}`,
-      healthy: { grootH },
-      injured: { grootI },
+      subname: "I am Groot",
+      srcF: `${groot}`,
+      healthy: `${grootH}`,
+      injured: `${grootI}`,
     },
     {
       id: 2,
       name: "Rocket Raccoon",
-      src: `${rocket}`,
-      healthy: { rocketH },
-      injured: { rocketI },
+      subname: "Rocket Raccoon",
+      srcF: `${rocket}`,
+      srcB: `${rocket2}`,
+      healthy: `${rocketH}`,
+      injured: `${rocketI}`,
     },
     {
       id: 3,
       name: "Star-Lord",
       subname: "Peter Quill",
-      src: `${starlord}`,
-      healthy: { starlordH },
-      injured: { starlordI },
+      srcF: `${starlordF}`,
+      srcB: `${starlordB}`,
+      healthy: `${starlordH}`,
+      injured: `${starlordI}`,
     },
   ]);
 

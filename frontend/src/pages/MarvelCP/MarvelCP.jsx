@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Guardians from "@components/Guardians/Guardians";
 import Navbar from "@components/Navbar/Navbar";
+import ImgContext from "@services/Context/ImgContext";
 import MarvelCPModal from "../../modal/MarvelCPModal/MarvelCPModal";
 import "./style.scss";
 
 export default function MarvelCP() {
   const [show, setShow] = useState(false);
+  const { mcp } = useContext(ImgContext);
 
   return (
     <section className="mcpPage">
@@ -27,7 +29,9 @@ export default function MarvelCP() {
       </button>
       <section className="Gallery">
         <div className="guardians">
-          <Guardians />
+          <ImgContext.Provider value={{ mcp }}>
+            <Guardians />
+          </ImgContext.Provider>
         </div>
         {/* <div className="asgard">
           <Asgard />

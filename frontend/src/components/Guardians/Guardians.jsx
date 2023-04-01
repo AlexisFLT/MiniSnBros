@@ -34,12 +34,14 @@ export default function Guardians() {
     <section className="GuardiansPage">
       <h2 className="affTitleGuard">Gardiens de la Galaxie</h2>
       <ImgContext.Provider value={{ mcp }}>
-        <ImgModalGuardians
-          asoiaf={selectedImage}
-          className="imgModal"
-          onClose={() => setShow(false)}
-          show={show}
-        />
+        {show && (
+          <ImgModalGuardians
+            mcp={selectedImage}
+            className="imgModal"
+            onClose={() => setShow(false)}
+            show={show}
+          />
+        )}
       </ImgContext.Provider>
       <div className="swiperBlock">
         <button
@@ -76,7 +78,7 @@ export default function Guardians() {
                   <figure className="pictureBlock">
                     <img
                       className="pictureCharMCP"
-                      src={image.src}
+                      src={image.srcF}
                       alt={image.name}
                     />
                     <figcaption className="nameCharGuard">

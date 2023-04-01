@@ -24,7 +24,7 @@ export default function ImgModalNeutral(props) {
     <div className="modalImgN">
       <div className="modalImgBody" key={asoiaf.id}>
         <h1 className="modalImgTitleN">
-          {asoiaf.name} -{" "}
+          {asoiaf.name} -
           <span className="modalSubnameN"> {asoiaf.subname}</span>
         </h1>
         <div className="contentImages">
