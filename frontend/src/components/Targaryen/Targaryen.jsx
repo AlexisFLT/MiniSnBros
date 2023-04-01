@@ -7,7 +7,7 @@ import ImgContext from "@services/Context/ImgContext";
 import { useContext, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
-import ImgModal from "../../modal/ImgModal/Targ/ImgModalTarg";
+import ImgModalTarg from "../../modal/ImgModal/Targ/ImgModalTarg";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
 import "./style.scss";
@@ -35,7 +35,7 @@ export default function Targaryen() {
       <h2 className="factionTitleTarg">House Targaryen</h2>
       <ImgContext.Provider value={{ asoiaf }}>
         {show && (
-          <ImgModal
+          <ImgModalTarg
             asoiaf={selectedImage}
             className="imgModal"
             onClose={() => setShow(false)}
