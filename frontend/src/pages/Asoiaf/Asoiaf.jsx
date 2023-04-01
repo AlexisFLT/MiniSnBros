@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-no-constructed-context-values */
-import { useContext, useState } from "react";
+import { useContext, useState, useMemo } from "react";
 // import { ImImages } from "react-icons/im";
 import Navbar from "@components/Navbar/Navbar";
 import Neutral from "@components/Neutral/Neutral";
@@ -11,6 +10,7 @@ import "./style.scss";
 export default function Asoiaf() {
   const [show, setShow] = useState(false);
   const { asoiaf } = useContext(ImgContext);
+  const asoaifMemo = useMemo(() => ({ asoiaf }), [asoiaf]);
 
   return (
     <section className="asoiafPage">
@@ -32,12 +32,12 @@ export default function Asoiaf() {
       </button>
       <section className="Gallery">
         <div className="targaryen">
-          <ImgContext.Provider value={{ asoiaf }}>
+          <ImgContext.Provider value={asoaifMemo}>
             <Targaryen />
           </ImgContext.Provider>
         </div>
         <div className="neutral">
-          <ImgContext.Provider value={{ asoiaf }}>
+          <ImgContext.Provider value={asoaifMemo}>
             <Neutral />
           </ImgContext.Provider>
         </div>

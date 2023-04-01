@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useMemo } from "react";
 import Guardians from "@components/Guardians/Guardians";
 import Navbar from "@components/Navbar/Navbar";
 import ImgContext from "@services/Context/ImgContext";
@@ -8,6 +8,7 @@ import "./style.scss";
 export default function MarvelCP() {
   const [show, setShow] = useState(false);
   const { mcp } = useContext(ImgContext);
+  const mcpMemo = useMemo(() => ({ mcp }), [mcp]);
 
   return (
     <section className="mcpPage">
@@ -29,7 +30,7 @@ export default function MarvelCP() {
       </button>
       <section className="Gallery">
         <div className="guardians">
-          <ImgContext.Provider value={{ mcp }}>
+          <ImgContext.Provider value={mcpMemo}>
             <Guardians />
           </ImgContext.Provider>
         </div>
