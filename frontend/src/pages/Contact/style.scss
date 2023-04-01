@@ -1,0 +1,88 @@
+@use "../../App.scss";
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.catchphraseContact {
+  display: block;
+  margin: auto;
+  font-size: App.$fontSize;
+  font-family: App.$fontFamily;
+  color: App.$colorSecondary;
+  margin-top: 8%;
+}
+
+.formBlock {
+  width: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 2%;
+}
+
+.labelName {
+  font-family: App.$fontFamily;
+  font-size: calc(App.$fontSize/1.5);
+  color: App.$colorThird;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.inputText {
+  padding: 5px;
+  font-size: calc(App.$fontSize/1.5);
+  font-family: "Times New Roman", Times, serif;
+  border-width: 1px;
+  border-color: #cccccc;
+  background-color: #ffffff;
+  color: #000000;
+  border-style: solid;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 3px 3px;
+}
+
+.inputText:focus {
+  outline: solid 1px App.$colorSecondary;
+}
+
+.textareaInput:focus {
+  outline: solid 1px App.$colorSecondary;
+}
+
+.sendButton {
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+  background-color: App.$colorFourth;
+  border-radius: 0.5em;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: App.$fontFamily;
+  font-size: calc(App.$fontSize/1.5);
+  padding: 13px 31px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 3px 3px;
+}
+
+button:hover {
+  transition: ease-in 0.5s;
+  background-color: App.$colorSecondary;
+}
+
+button:active {
+  position: relative;
+  outline: 1px solid App.$colorTarg;
+  // top: 1px;
+}
+
+.messageSend {
+  display: none;
+  margin-top: 3%;
+  text-align: center;
+  font-family: App.$fontFamily;
+  font-size: App.$fontSize;
+  color: App.$colorTarg;
+}

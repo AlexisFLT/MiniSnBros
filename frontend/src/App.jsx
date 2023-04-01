@@ -1,13 +1,14 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import ImgContext from "@services/Context/ImgContext";
-import About from "@pages/About/About";
-import Asoiaf from "@pages/Asoiaf/Asoiaf";
-import MarvelCP from "@pages/MarvelCP/MarvelCP";
-import SwLegion from "@pages/SwLegion/SwLegion";
-import Various from "@pages/Various/Various";
+import ImgContext from "./services/Context/ImgContext";
+import About from "./pages/About/About";
+import Asoiaf from "./pages/Asoiaf/Asoiaf";
+import MarvelCP from "./pages/MarvelCP/MarvelCP";
+import SwLegion from "./pages/SwLegion/SwLegion";
+import Various from "./pages/Various/Various";
 import Home from "./pages/Home/Home";
+import Contact from "./pages/Contact/Contact";
 
 // Minis TDF Import //
 
@@ -366,6 +367,7 @@ function App() {
 
       <Route path="/divers" element={<Various />} />
       {/* <Route path="/battlereport" element={<Battlereport />} /> */}
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 }
