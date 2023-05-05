@@ -50,6 +50,11 @@ export default function Navbar() {
               <p>Battle Report</p>
             </li>
           </Link>
+          <Link to="/contact" className="navBR linkMenu">
+            <li className="navBRText">
+              <p>Contactez moi</p>
+            </li>
+          </Link>
         </ul>
       </div>
     </nav>
