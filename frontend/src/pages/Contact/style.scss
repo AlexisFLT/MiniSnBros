@@ -67,12 +67,12 @@
   box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 10px, rgba(0, 0, 0, 0.23) 0px 3px 3px;
 }
 
-button:hover {
+.sendButton:hover {
   transition: ease-in 0.5s;
   background-color: App.$colorSecondary;
 }
 
-button:active {
+.sendButton:active {
   position: relative;
   outline: 1px solid App.$colorTarg;
   // top: 1px;

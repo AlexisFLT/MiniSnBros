@@ -1,8 +1,8 @@
 import { useRef } from "react";
 // eslint-disable-next-line import/no-extraneous-dependencies
 import emailjs from "@emailjs/browser";
-import "./style.scss";
 import Navbar from "@components/Navbar/Navbar";
+import "./style.scss";
 
 export default function Contact() {
   const form = useRef();
@@ -45,11 +45,23 @@ export default function Contact() {
           <label htmlFor="name" className="labelName">
             Nom
           </label>
-          <input className="inputText" type="text" name="name" required />
+          <input
+            className="inputText"
+            type="text"
+            name="name"
+            required
+            autoComplete="off"
+          />
           <label className="labelName" htmlFor="email">
             Email
           </label>
-          <input className="inputText" type="email" name="email" required />
+          <input
+            className="inputText"
+            type="email"
+            name="email"
+            required
+            autoComplete="off"
+          />
           <label className="labelName" htmlFor="message">
             Message
           </label>
@@ -58,6 +70,7 @@ export default function Contact() {
             name="message"
             rows={8}
             required
+            autoComplete="off"
           />
           <button
             className="sendButton"
